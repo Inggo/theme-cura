@@ -10,4 +10,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme-cura
 */
 
+// Layout provided used non-standard 1284px width
+// adjusting container-lg and screen-lg as needed
+$container-lg: 1314px;
+$screen-lg: 1350px;
+
 @import "bootstrap";
