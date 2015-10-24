@@ -6,6 +6,23 @@ class ThemeCustomizer implements ThemeCustomizerInterface
 {
     // Reference to the WP_Customize_Manager
     protected $c;
+    public $social = array(
+        'facebook'  => 'Facebook',
+        'twitter'   => 'Twitter',
+        'linkedin'  => 'LinkedIn',
+        'google'    => 'Google+',
+        'instagram' => 'Instagram',
+    );
+
+    /**
+     * Get social options
+     */
+    public function getSocialOptions()
+    {
+        return array_map(function ($media) {
+            return "social_{$media}";
+        }, array_keys($this->social));
+    }
 
     /**
      * Register the customize controls
@@ -35,11 +52,9 @@ class ThemeCustomizer implements ThemeCustomizerInterface
     private function initializeSocialMedia()
     {
         $this->addSection('theme_cura_social_media', 'Social Media', 130);
-        $this->addTextControl('social_facebook', 'theme_cura_social_media', 'Facebook');
-        $this->addTextControl('social_twitter', 'theme_cura_social_media', 'Twitter');
-        $this->addTextControl('social_linkedin', 'theme_cura_social_media', 'LinkedIn');
-        $this->addTextControl('social_google', 'theme_cura_social_media', 'Google+');
-        $this->addTextControl('social_instagram', 'theme_cura_social_media', 'Instagram');
+        foreach ($this->social as $media => $label) {
+            $this->addTextControl("social_{$media}", 'theme_cura_social_media', $label);
+        }
     }
 
     /**

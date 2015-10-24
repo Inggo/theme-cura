@@ -8428,6 +8428,78 @@ button.close {
 	padding-bottom: 110px;
 }
 
+.icon-location {
+	background: url("./images/sprites.png");
+	background-position: -0px -0px;
+	background-position: -83px -0px;
+	width: 30px;
+	height: 38px;
+	display: inline-block;
+}
+
+.icon-phone {
+	background: url("./images/sprites.png");
+	background-position: -0px -0px;
+	background-position: -0px -74px;
+	width: 30px;
+	height: 38px;
+	display: inline-block;
+}
+
+.icon-mail {
+	background: url("./images/sprites.png");
+	background-position: -0px -0px;
+	background-position: -30px -74px;
+	width: 38px;
+	height: 29px;
+	display: inline-block;
+}
+
+.icon-social_facebook {
+	background: url("./images/sprites.png");
+	background-position: -0px -0px;
+	background-position: -113px -0px;
+	width: 20px;
+	height: 38px;
+	display: inline-block;
+}
+
+.icon-social_google {
+	background: url("./images/sprites.png");
+	background-position: -0px -0px;
+	background-position: -0px -0px;
+	width: 41px;
+	height: 38px;
+	display: inline-block;
+}
+
+.icon-social_instagram {
+	background: url("./images/sprites.png");
+	background-position: -0px -0px;
+	background-position: -36px -38px;
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+}
+
+.icon-social_linkedin {
+	background: url("./images/sprites.png");
+	background-position: -0px -0px;
+	background-position: -0px -38px;
+	width: 36px;
+	height: 36px;
+	display: inline-block;
+}
+
+.icon-social_twitter {
+	background: url("./images/sprites.png");
+	background-position: -0px -0px;
+	background-position: -41px -0px;
+	width: 42px;
+	height: 34px;
+	display: inline-block;
+}
+
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
@@ -8555,6 +8627,39 @@ button.close {
 	.nav > li {
 		font-size: 25px;
 		letter-spacing: 7px;
+	}
+}
+
+.footer-top {
+	padding: 35px 0;
+	background: #FDD304;
+}
+
+.contact-detail {
+	padding: 64px 0 0;
+	position: relative;
+}
+
+.contact-detail .icon {
+	position: absolute;
+	top: 22px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.social-list {
+	margin: 30px 0;
+	text-align: center;
+}
+
+.social-media {
+	vertical-align: middle;
+}
+
+@media screen and (min-width: 768px) {
+	.social-list {
+		text-align: right;
 	}
 }
 

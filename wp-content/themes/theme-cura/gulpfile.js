@@ -38,6 +38,6 @@ gulp.task('autoprefixer', function () {
 
 // Initialize watchers
 gulp.task('watch', function(){
-  gulp.watch('./scss/*.scss', ['sass']);
+  gulp.watch('./scss/*', ['sass']);
   gulp.watch('./style.css', ['css', 'autoprefixer']);
 });
