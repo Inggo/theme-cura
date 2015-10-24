@@ -3,6 +3,12 @@
     background: $yellow;
 }
 
+.footer-bottom {
+    padding: 35px 0;
+    background: $gray;
+    color: $white;
+}
+
 .contact-detail {
     padding: 64px 0 0;
     position: relative;
@@ -25,7 +31,32 @@
     vertical-align: middle;
 }
 
-@media screen and (min-width: 768px) {
+.copyright,
+.footer-nav {
+    margin: 0;
+    text-align: center;
+    a {
+        color: $white;        
+    }
+}
+
+.footer-nav li {
+    line-height: 14px;
+    + li {
+        border-left: 1px solid $white;
+        margin-left: -5px;
+    }
+}
+
+@media screen and (min-width: $screen-sm) {
+    .copyright,
+    .footer-nav {
+        text-align: left;
+    }
+
+}
+
+@media screen and (min-width: $screen-lg) {
     .social-list {
         text-align: right;
     }

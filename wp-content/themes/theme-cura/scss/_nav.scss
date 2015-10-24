@@ -3,13 +3,13 @@
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
-    background: $gray;
+    background: $light-gray;
 }
 
 .nav > li {
     a:hover,
     a:focus {
-        background: $gray;
+        background: $light-gray;
         color: $black;
     }
 }
@@ -52,7 +52,7 @@
 }
 
 .dropdown-menu {
-    background: $gray;
+    background: $light-gray;
     box-shadow: none;
     border: none;
     border-radius: 0;
@@ -90,7 +90,7 @@
 }
 
 .navbar-nav .open .dropdown-menu {
-    background: $gray;
+    background: $light-gray;
 
     > li > a {
         font-size: 12px;
