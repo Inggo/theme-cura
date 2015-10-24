@@ -15,7 +15,7 @@ if (has_post_thumbnail()) {
     $thumb_url = $theme->helper->getVideoThumbnailFromLink(get_field('video_url'));
 }
 ?>
-<div class="container video-frame-container youtube-video-frame-container">
+<div class="video-frame-container youtube-video-frame-container">
     <div class="row">
         <div class="col-xs-12">
             <div class="video-container youtube-video-container">

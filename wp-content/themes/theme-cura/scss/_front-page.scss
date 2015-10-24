@@ -12,10 +12,10 @@
     }
 
     .header-main {
-        padding: 15px 0 15px 120px;
+        padding: 15px 0 15px 130px;
     }
 
-    > .video-frame-container {
+    .video-frame-container {
         margin-top: 194px;
         margin-bottom: 42px;
     }
@@ -77,4 +77,9 @@
 
 .home .page-wrapper {
     padding-top: 0;
+}
+
+.home .video-container {
+    max-width: 890px;
+    background: $white;
 }

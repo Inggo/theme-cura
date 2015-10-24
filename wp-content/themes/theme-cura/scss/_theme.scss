@@ -5,6 +5,7 @@ h1 {
     font-size: 62px;
     font-weight: bold;
     letter-spacing: 14px;
+    margin: 0 0 90px;
 }
 
 .container-main {
@@ -13,11 +14,17 @@ h1 {
 }
 
 .page-wrapper {
-    padding-top: 110px;
+    padding-top: 20px;
 }
 
 .content-divider {
     border-top: 1px solid $yellow;
     border-bottom: 1px solid $light-yellow;
     margin-top: 20px;
+}
+
+@media screen and (min-width: $screen-sm) {
+    .page-wrapper {
+        padding-top: 110px;
+    }
 }

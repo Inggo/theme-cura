@@ -8429,6 +8429,7 @@ h1 {
 	font-size: 62px;
 	font-weight: bold;
 	letter-spacing: 14px;
+	margin: 0 0 90px;
 }
 
 .container-main {
@@ -8437,13 +8438,19 @@ h1 {
 }
 
 .page-wrapper {
-	padding-top: 110px;
+	padding-top: 20px;
 }
 
 .content-divider {
 	border-top: 1px solid #FDD304;
 	border-bottom: 1px solid #FEDC5E;
 	margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+	.page-wrapper {
+		padding-top: 110px;
+	}
 }
 
 .icon-location {
@@ -8758,10 +8765,10 @@ h1 {
 }
 
 .hero .header-main {
-	padding: 15px 0 15px 120px;
+	padding: 15px 0 15px 130px;
 }
 
-.hero > .video-frame-container {
+.hero .video-frame-container {
 	margin-top: 194px;
 	margin-bottom: 42px;
 }
@@ -8831,12 +8838,16 @@ h1 {
 	padding-top: 0;
 }
 
-.video-container {
+.home .video-container {
 	max-width: 890px;
+	background: #FFF;
+}
+
+.video-container {
 	margin: 0 auto;
 	position: relative;
 	padding: 10px;
-	background: #FFF;
+	background: #FDD304;
 }
 
 .video-container > .embed-responsive {
