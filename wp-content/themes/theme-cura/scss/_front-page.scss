@@ -2,6 +2,7 @@
 .hero {
     padding: 150px 0;
     background: $light-gray;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 
@@ -21,7 +22,7 @@
         }
     }
 
-    > .container {
+    > .nav-header-container {
         margin-top: -150px;
         background: $white;
     }
@@ -30,6 +31,12 @@
         padding: 15px 0 15px 120px;
     }
 
+    > .video-frame-container {
+        margin-top: 194px;
+        margin-bottom: 42px;
+    }
+
+
     @media screen and (min-width: $screen-sm) {   
         padding: 20px 0;
 
@@ -37,7 +44,7 @@
             color: $white;
         }
 
-        > .container {
+        > .nav-header-container {
             margin-top: 0;
             background: transparent;
         }
@@ -53,5 +60,27 @@
 
     @media screen and (min-width: $screen-lg) {
         padding: 95px 0;
+    }
+
+    .front-page-heading {
+        font-family: Nexa Bold, sans-serif;
+        font-weight: bold;
+        line-height: 42px;
+        font-size: 22px;
+        letter-spacing: 5px;
+        color: $yellow;
+    }
+}
+
+.home .subheading {
+    background: $yellow;
+    padding: 85px 0;
+
+    .front-page-subheading {
+        font-family: Nexa Bold, sans-serif;
+        line-height: 45px;
+        font-size: 25px;
+        letter-spacing: 1px;
+        color: $dark-gray;
     }
 }

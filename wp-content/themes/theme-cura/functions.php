@@ -1,6 +1,9 @@
 <?php
 
-require_once('lib/ThemeCura.php');
+// Require Classes
+require_once('lib/Helpers/YouTubeHelper.php');
+require_once('lib/WordPress/ThemeHelper.php');
+require_once('lib/WordPress/ThemeCura.php');
 
-global $theme_cura;
-$theme_cura = new ThemeCura;
+global $theme;
+$theme = new Inggo\WordPress\ThemeCura(new Inggo\WordPress\ThemeHelper);
