@@ -2,7 +2,8 @@
 
 use Inggo\WordPress\ThemeHelper;
 use Inggo\WordPress\CustomizerInterface;
-use Inggo\WordPress\ThemeCura\CustomPostRegistrar;
+use Inggo\WordPress\ThemeCura\CustomPostsRegistrar;
+use Inggo\WordPress\ThemeCura\CustomFieldsRegistrar;
 
 class ThemeCura
 {
@@ -26,6 +27,7 @@ class ThemeCura
         \add_action('after_setup_theme', array($this, 'disableAdminBar'));
         \add_action('customize_register', array($this->customizer, 'register'));
         \add_action('init', array($this, 'registerPostTypes'));
+        \add_action('init', array($this, 'registerCustomFields'));
     }
 
     /**
@@ -48,8 +50,17 @@ class ThemeCura
      */
     public function registerPostTypes()
     {
-        $this->cpt_registrar = new CustomPostRegistrar();
+        $this->cpt_registrar = new CustomPostsRegistrar();
         $this->cpt_registrar->register();
+    }
+
+    /**
+     * Register Custom Fields
+     */
+    public function registerCustomFields()
+    {
+        $this->cf_registrar = new CustomFieldsRegistrar();
+        $this->cf_registrar->register();
     }
 
     /**

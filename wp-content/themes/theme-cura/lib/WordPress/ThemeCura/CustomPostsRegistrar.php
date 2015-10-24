@@ -1,8 +1,8 @@
 <?php namespace Inggo\WordPress\ThemeCura;
 
-use Inggo\WordPress\CustomPostRegistrarInterface;
+use Inggo\WordPress\CustomPostsRegistrarInterface;
 
-class CustomPostRegistrar implements CustomPostRegistrarInterface
+class CustomPostsRegistrar implements CustomPostsRegistrarInterface
 {
     /**
      * Do the registrations here

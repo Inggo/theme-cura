@@ -1,6 +1,6 @@
 <?php namespace Inggo\WordPress;
 
-interface CustomPostRegistrarInterface
+interface CustomFieldsRegistrarInterface
 {
     public function register();
 }
