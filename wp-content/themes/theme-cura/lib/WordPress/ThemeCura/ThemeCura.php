@@ -61,6 +61,14 @@ class ThemeCura
 
         // Add thumbnail support
         \add_theme_support('post-thumbnails', array('post', 'cura_property'));
+
+        // Add menus support
+        \add_theme_support('menus');
+
+        // Register the nav menus
+        \register_nav_menus(array(
+            'main_menu' => 'Main Menu',
+        ));
     }
 
     /**

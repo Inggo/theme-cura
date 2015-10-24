@@ -3,7 +3,7 @@
         <div class="col-xs-12">
             <header id="header" class="header-main">
                 <div class="logo-container">
-                    <img src="<?= get_header_image(); ?>" alt="<?php bloginfo('title') ?>" class="img-responsive">
+                    <a href="<?=home_url();?>"><img src="<?= get_header_image(); ?>" alt="<?php bloginfo('title') ?>" class="img-responsive"></a>
                 </div>
                 <nav class="nav-container navbar">
                     <div class="navbar-header">
@@ -16,29 +16,11 @@
                     </div>
 
                     <div class="collapse navbar-collapse" id="nav-main">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Process</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Properties <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Play Your Game</a></li>
-                                    <li><a href="#">Testimonials</a></li>
-                                    <li><a href="#">What Can Go Wrong</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Blog</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Play Your Game</a></li>
-                                    <li><a href="#">Testimonials</a></li>
-                                    <li><a href="#">What Can Go Wrong</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <?php wp_nav_menu(array(
+                            'theme_location' => 'main_menu',
+                            'menu_class'     => 'nav navbar-nav',
+                            'walker'         => new wp_bootstrap_navwalker()
+                        )); ?>
                     </div>
                 </nav>
             </header>
