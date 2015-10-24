@@ -56,8 +56,12 @@
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8">
                     <ul class="list-inline footer-nav">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
+                        <?php if (get_option('footer_privacy_policy')): ?>
+                        <li><a href="<?=get_permalink(get_option('footer_privacy_policy'));?>"><?=get_the_title(get_option('footer_privacy_policy'));?></a></li>
+                        <?php endif; ?>
+                        <?php if (get_option('footer_cookie_policy')): ?>
+                        <li><a href="<?=get_permalink(get_option('footer_cookie_policy'));?>"><?=get_the_title(get_option('footer_cookie_policy'));?></a></li>
+                        <?php endif; ?>
                         <li><a href="javascript:;" class="back-to-top">Back To Top</a></li>
                     </ul>
                 </div>

@@ -1,11 +1,12 @@
 <?php namespace Inggo\WordPress\ThemeCura;
 
 use Inggo\WordPress\ThemeCustomizerInterface;
+use Inggo\WordPress\ThemeCustomizeHelper;
 
 class ThemeCustomizer implements ThemeCustomizerInterface
 {
-    // Reference to the WP_Customize_Manager
-    protected $c;
+    // Reference to the ThemeCustomizeHelper object
+    protected $ch;
     public $social = array(
         'facebook'  => 'Facebook',
         'twitter'   => 'Twitter',
@@ -15,24 +16,15 @@ class ThemeCustomizer implements ThemeCustomizerInterface
     );
 
     /**
-     * Get social options
-     */
-    public function getSocialOptions()
-    {
-        return array_map(function ($media) {
-            return "social_{$media}";
-        }, array_keys($this->social));
-    }
-
-    /**
      * Register the customize controls
      * @param  \WP_Customize_Manager $wp_customize WP_Customize_Manager object
      */
-    public function register(\WP_Customize_Manager $wp_customize)
+    public function register(\WP_Customize_Manager $manager)
     {
-        $this->c = $wp_customize;
+        $this->ch = new ThemeCustomizeHelper($manager);
         $this->initializeContactDetails();
         $this->initializeSocialMedia();
+        $this->initializeFooterPages();
     }
 
     /**
@@ -40,10 +32,10 @@ class ThemeCustomizer implements ThemeCustomizerInterface
      */
     private function initializeContactDetails()
     {
-        $this->addSection('theme_cura_contact_details', 'Contact Details');
-        $this->addTextAreaControl('contact_address', 'theme_cura_contact_details', 'Address');
-        $this->addTextControl('contact_number', 'theme_cura_contact_details', 'Contact Number');
-        $this->addTextControl('contact_email', 'theme_cura_contact_details', 'Email Address');
+        $this->ch->addSection('theme_cura_contact_details', 'Contact Details');
+        $this->ch->addControl('contact_address', 'theme_cura_contact_details', 'Address', 'textarea');
+        $this->ch->addControl('contact_number', 'theme_cura_contact_details', 'Contact Number');
+        $this->ch->addControl('contact_email', 'theme_cura_contact_details', 'Email Address');
     }
 
     /**
@@ -51,65 +43,29 @@ class ThemeCustomizer implements ThemeCustomizerInterface
      */
     private function initializeSocialMedia()
     {
-        $this->addSection('theme_cura_social_media', 'Social Media', 130);
+        $this->ch->addSection('theme_cura_social_media', 'Social Media', 130);
         foreach ($this->social as $media => $label) {
-            $this->addTextControl("social_{$media}", 'theme_cura_social_media', $label);
+            $this->ch->addControl("social_{$media}", 'theme_cura_social_media', $label);
         }
     }
 
     /**
-     * Adds a section to the customizer
-     * @param string   $name      Name of the section
-     * @param string   $title     Label of the section
-     * @param integer  $priority  Priority of the section
+     * Initialize Footer Pages section and fields
      */
-    private function addSection($name, $title, $priority = 120)
+    private function initializeFooterPages()
     {
-        $this->c->add_section($name, array(
-            'title'      => \__($title, 'theme-cura'),
-            'priority'   => $priority,
-            'capability' => 'edit_theme_options',
-        ));
+        $this->ch->addSection('theme_cura_footer_pages', 'Footer Pages', 140);
+        $this->ch->addPagesControl('footer_privacy_policy', 'theme_cura_footer_pages', 'Privacy Policy Page');
+        $this->ch->addPagesControl('footer_cookie_policy', 'theme_cura_footer_pages', 'Cookie Policy Page');
     }
 
     /**
-     * Adds a text area control to a section
-     * @param string  $name         Name of the control
-     * @param string  $section      Section where the control will go
-     * @param string  $label        Label of the control
-     * @param string  $description  Description of the control
+     * Get social options
      */
-    private function addTextAreaControl($name, $section, $label, $description = '')
+    public function getSocialOptions()
     {
-        $this->addTextControl($name, $section, $label, $description = '', 'textarea');
-    }
-
-    /**
-     * Adss a text control to a section
-     * @param string  $name         Name of the control
-     * @param string  $section      Section where the control will go
-     * @param string  $label        Label of the control
-     * @param string  $description  Description of the control
-     * @param string  $type         Type of the control (text|textarea)
-     */
-    private function addTextControl($name, $section, $label, $description = '', $type = 'text')
-    {
-        $this->c->add_setting($name, array(
-            'default'   => '',
-            'type'      => 'option',
-            'transport' => 'postMessage',
-        ));
-
-        $this->c->add_control(new \WP_Customize_Control(
-            $this->c,
-            $name,
-            array(
-                'label'       => \__($label, 'theme-cura'),
-                'description' => \__($description, 'theme-cura'),
-                'section'     => $section,
-                'settings'    => $name,
-                'type'        => $type,
-            )
-        ));
+        return array_map(function ($media) {
+            return "social_{$media}";
+        }, array_keys($this->social));
     }
 }
