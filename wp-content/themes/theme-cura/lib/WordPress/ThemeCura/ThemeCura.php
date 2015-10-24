@@ -4,6 +4,7 @@ use Inggo\WordPress\ThemeHelper;
 use Inggo\WordPress\CustomizerInterface;
 use Inggo\WordPress\ThemeCura\CustomPostsRegistrar;
 use Inggo\WordPress\ThemeCura\CustomFieldsRegistrar;
+use Inggo\WordPress\ThemeCura\ShortcodesRegistrar;
 
 class ThemeCura
 {
@@ -11,23 +12,36 @@ class ThemeCura
     public $helper;
     public $customizer;
     public $cpt_registrar;
+    public $cf_registrar;
+    public $sc_registrar;
 
     public function __construct(ThemeHelper $helper, CustomizerInterface $customizer)
     {
+        // Set theme variables
         $this->theme_data = \wp_get_theme();
         $this->helper = $helper;
         $this->customizer = $customizer;
         
+        // Add theme hooks
         \add_action('after_setup_theme', array($this, 'setup'));
-        \add_action('init', array($this, 'registerStyles'));
-        \add_action('init', array($this, 'registerScripts'));
+        \add_action('after_setup_theme', array($this, 'disableAdminBar'));
+        
         \add_action('wp_enqueue_scripts', array($this, 'enqueueStyles'));
         \add_action('wp_enqueue_scripts', array($this, 'enqueueScripts'));
-        \add_action('admin_notices', array($this, 'checkDependencies'));
-        \add_action('after_setup_theme', array($this, 'disableAdminBar'));
-        \add_action('customize_register', array($this->customizer, 'register'));
+        
+        \add_action('init', array($this, 'registerStyles'));
+        \add_action('init', array($this, 'registerScripts'));
         \add_action('init', array($this, 'registerPostTypes'));
         \add_action('init', array($this, 'registerCustomFields'));
+        \add_action('init', array($this, 'registerShortcodes'));
+
+        \add_action('admin_notices', array($this, 'checkDependencies'));
+        
+        \add_action('customize_register', array($this->customizer, 'register'));
+        
+        // Delay wpautop after shortcodes have been parsed
+        \remove_filter('the_content', 'wpautop');
+        \add_filter('the_content', 'wpautop', 12);
     }
 
     /**
@@ -35,6 +49,7 @@ class ThemeCura
      */
     public function setup()
     {
+        // Add custom header support
         \add_theme_support('custom-header', array(
             'flex-width'    => true,
             'width'         => 120,
@@ -43,6 +58,9 @@ class ThemeCura
             'uploads'       => true,
             'default-image' => \get_template_directory_uri() . '/images/logo.png',
         ));
+
+        // Add thumbnail support
+        \add_theme_support('post-thumbnails', array('post', 'cura_property'));
     }
 
     /**
@@ -61,6 +79,15 @@ class ThemeCura
     {
         $this->cf_registrar = new CustomFieldsRegistrar();
         $this->cf_registrar->register();
+    }
+
+    /**
+     * Register Shortcodes
+     */
+    public function registerShortcodes()
+    {
+        $this->sc_registrar = new ShortcodesRegistrar();
+        $this->sc_registrar->register();
     }
 
     /**

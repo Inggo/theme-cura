@@ -13,14 +13,14 @@ class CustomFieldsRegistrar implements CustomFieldsRegistrarInterface
     }
 
     /**
-     * Register the "cura_property" CPT
+     * Register the Front-Page custom fields
      */
     private function registerFrontPageFields()
     {
         if (function_exists("register_field_group")) {
             register_field_group(array (
-                'id' => 'acf_front-page-fields',
-                'title' => 'Front-Page Fields',
+                'id' => 'acf_front-page',
+                'title' => 'Front-Page',
                 'fields' => array (
                     array (
                         'key' => 'field_562b0524b5eae',

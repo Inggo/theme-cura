@@ -37,6 +37,7 @@ class CustomPostsRegistrar implements CustomPostsRegistrarInterface
             "query_var" => true,
             "menu_position" => 20,
             "menu_icon" => "dashicons-admin-multisite",
+            "supports" => array("title", "thumbnail", "page-attributes"),
         );
 
         \register_post_type('cura_property', $args);

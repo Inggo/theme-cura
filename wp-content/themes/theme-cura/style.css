@@ -8430,7 +8430,7 @@ button.close {
 
 .icon-location {
 	background: url("./images/sprites.png");
-	background-position: -83px -0px;
+	background-position: -30px -73px;
 	width: 30px;
 	height: 38px;
 	display: inline-block;
@@ -8438,7 +8438,7 @@ button.close {
 
 .icon-phone {
 	background: url("./images/sprites.png");
-	background-position: -0px -74px;
+	background-position: -0px -73px;
 	width: 30px;
 	height: 38px;
 	display: inline-block;
@@ -8446,7 +8446,7 @@ button.close {
 
 .icon-mail {
 	background: url("./images/sprites.png");
-	background-position: -30px -74px;
+	background-position: -60px -73px;
 	width: 38px;
 	height: 29px;
 	display: inline-block;
@@ -8454,7 +8454,7 @@ button.close {
 
 .icon-social_facebook {
 	background: url("./images/sprites.png");
-	background-position: -113px -0px;
+	background-position: -117px -25px;
 	width: 20px;
 	height: 38px;
 	display: inline-block;
@@ -8462,7 +8462,7 @@ button.close {
 
 .icon-social_google {
 	background: url("./images/sprites.png");
-	background-position: -0px -0px;
+	background-position: -40px -0px;
 	width: 41px;
 	height: 38px;
 	display: inline-block;
@@ -8470,7 +8470,7 @@ button.close {
 
 .icon-social_instagram {
 	background: url("./images/sprites.png");
-	background-position: -36px -38px;
+	background-position: -81px -36px;
 	width: 35px;
 	height: 35px;
 	display: inline-block;
@@ -8478,7 +8478,7 @@ button.close {
 
 .icon-social_linkedin {
 	background: url("./images/sprites.png");
-	background-position: -0px -38px;
+	background-position: -81px -0px;
 	width: 36px;
 	height: 36px;
 	display: inline-block;
@@ -8486,8 +8486,32 @@ button.close {
 
 .icon-social_twitter {
 	background: url("./images/sprites.png");
-	background-position: -41px -0px;
+	background-position: -0px -39px;
 	width: 42px;
+	height: 34px;
+	display: inline-block;
+}
+
+.icon-bed {
+	background: url("./images/sprites.png");
+	background-position: -117px -0px;
+	width: 39px;
+	height: 25px;
+	display: inline-block;
+}
+
+.icon-bath {
+	background: url("./images/sprites.png");
+	background-position: -0px -0px;
+	width: 40px;
+	height: 39px;
+	display: inline-block;
+}
+
+.icon-parking {
+	background: url("./images/sprites.png");
+	background-position: -42px -39px;
+	width: 39px;
 	height: 34px;
 	display: inline-block;
 }
@@ -8782,6 +8806,7 @@ button.close {
 	font-size: 33px;
 	letter-spacing: 3px;
 	font-weight: bold;
+	margin: 0 0 75px;
 }
 
 .video-container {
@@ -8848,4 +8873,74 @@ button.close {
 
 .video-container.playing:hover > .play {
 	opacity: 0;
+}
+
+.cura-property {
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+	padding: 20px;
+	height: 300px;
+	max-width: 445px;
+	margin: 0 auto 35px;
+}
+
+.cura-property .contents {
+	color: #2F3B48;
+}
+
+.cura-property .contents .cura-property-title {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 0;
+	right: 0;
+	white-space: nowrap;
+	text-align: center;
+	margin: -13px auto 0;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 23px;
+	font-weight: bold;
+	line-height: 26px;
+}
+
+.cura-property .contents .cura-property-info {
+	font-family: Nexa Bold, sans-serif;
+	position: absolute;
+	top: 57.5%;
+	z-index: 2;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.cura-property .contents .cura-property-agent {
+	position: absolute;
+	font-weight: bold;
+	position: absolute;
+	bottom: 10px;
+	right: 15px;
+	font-style: italic;
+	z-index: 2;
+	text-transform: uppercase;
+	font-size: 16px;
+	letter-spacing: 2px;
+}
+
+.cura-property .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #FDD304;
+	opacity: 0.9;
+	z-index: 1;
+}
+
+.cura-property-info .icon {
+	margin-left: 5px;
 }
