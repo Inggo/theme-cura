@@ -1,20 +1,10 @@
 var gulp = require('gulp');
-var modernizr = require('gulp-modernizr');
 var sass = require('gulp-ruby-sass');
 var spriter = require('gulp-css-spriter');
 var autoprefixer = require('gulp-autoprefixer');
 
 // Watch for changes
 gulp.task('default', ['watch']);
-
-// Build modernizr based on tests
-gulp.task('modernizr', function() {
-  gulp.src('./js/*.js')
-    .pipe(modernizr({
-      "dest" : "js/modernizr.js",
-      "uglify" : false
-    }));
-});
 
 // Build CSS based on SCSS files
 gulp.task('sass', function() {
@@ -48,7 +38,6 @@ gulp.task('autoprefixer', function () {
 
 // Initialize watchers
 gulp.task('watch', function(){
-  gulp.watch('./js/*.js', ['modernizr']);
-  gulp.watch('./scss/style.scss', ['sass']);
+  gulp.watch('./scss/*.scss', ['sass']);
   gulp.watch('./style.css', ['css', 'autoprefixer']);
 });

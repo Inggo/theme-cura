@@ -3353,7 +3353,7 @@ output {
 	padding-top: 7px;
 	font-size: 14px;
 	line-height: 1.42857143;
-	color: #555555;
+	color: #CDCED0;
 }
 
 .form-control {
@@ -3363,7 +3363,7 @@ output {
 	padding: 6px 12px;
 	font-size: 14px;
 	line-height: 1.42857143;
-	color: #555555;
+	color: #CDCED0;
 	background-color: #fff;
 	background-image: none;
 	border: 1px solid #ccc;
@@ -5023,7 +5023,7 @@ tbody.collapse.in {
 	font-size: 14px;
 	font-weight: normal;
 	line-height: 1;
-	color: #555555;
+	color: #CDCED0;
 	text-align: center;
 	background-color: #eeeeee;
 	border: 1px solid #ccc;
@@ -5198,7 +5198,7 @@ tbody.collapse.in {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-	color: #555555;
+	color: #CDCED0;
 	background-color: #fff;
 	border: 1px solid #ddd;
 	border-bottom-color: transparent;
@@ -8409,4 +8409,111 @@ button.close {
 	.hidden-print {
 		display: none !important;
 	}
+}
+
+@font-face {
+	font-family: "Nexa Bold";
+	src: url("fonts/nexa_bold.eot");
+	src: url("fonts/nexa_bold.eot?#iefix") format("embedded-opentype"), url("fonts/nexa_bold.woff") format("woff"), url("fonts/nexa_bold.ttf") format("truetype"), url("fonts/nexa_bold.svg#Nexa Bold") format("svg");
+}
+
+@font-face {
+	font-family: "Nexa Light";
+	src: url("fonts/nexa_light.eot");
+	src: url("fonts/nexa_light.eot?#iefix") format("embedded-opentype"), url("fonts/nexa_light.woff") format("woff"), url("fonts/nexa_light.ttf") format("truetype"), url("fonts/nexa_light.svg#Nexa Light") format("svg");
+}
+
+body {
+	font-family: Nexa Light, sans-serif;
+}
+
+.hero {
+	padding: 95px 0;
+	background: #EEE;
+	background-size: cover;
+	background-position: center center;
+}
+
+.hero .icon-bar {
+	background: #000;
+}
+
+.hero .nav > li > a {
+	color: #FFF;
+}
+
+.hero .nav > li > a:hover,
+.hero .nav > li > a:focus {
+	background: #CDCED0;
+	color: #000;
+}
+
+.nav > li a:hover,
+.nav > li a:focus {
+	background: #CDCED0;
+	color: #000;
+}
+
+.header-main {
+	padding: 0 0 0 130px;
+}
+
+.logo-container {
+	width: 120px;
+	margin: 0 0 0 -120px;
+	float: left;
+}
+
+.navbar-header {
+	height: 60px;
+}
+
+.nav {
+	float: right;
+}
+
+.nav > li {
+	font-family: Nexa Bold, sans-serif;
+	font-size: 20px;
+	letter-spacing: 7px;
+}
+
+.nav > li.dropdown > a {
+	padding-right: 18px;
+}
+
+.nav > li:last-child.dropdown .dropdown-menu {
+	right: 0;
+	left: auto;
+}
+
+.dropdown-menu {
+	background: #CDCED0;
+	box-shadow: none;
+	border: none;
+	border-radius: 0;
+	padding: 0;
+	min-width: 273px;
+}
+
+.dropdown-menu > li > a {
+	font-family: Nexa Light, sans-serif;
+	letter-spacing: 0;
+	border-bottom: 1px solid #FFF;
+	color: #2F3B48;
+	line-height: 49px;
+}
+
+.dropdown-menu > li > a:hover {
+	color: #FFF;
+}
+
+.dropdown-menu > li:last-child > a {
+	border-bottom: none;
+}
+
+.dropdown .caret {
+	position: absolute;
+	top: 50%;
+	margin-top: -2px;
 }

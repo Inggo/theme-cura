@@ -1,11 +1,47 @@
-<header class="container">
-	<div class="row">
-		<div class="col-lg-4 col-md-3 col-sm-2 col-xs-2">
-		    <div class="logo-container">
-				<img src="<?= get_header_image(); ?>" alt="<?php bloginfo('title') ?>">
-			</div>
-		</div>
-		<div class="col-lg-8 col-md-9 col-sm-10 col-xs-10">
-		</div>
-	</div>
-</header>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <header id="header" class="header-main">
+                <div class="logo-container">
+                    <img src="<?= get_header_image(); ?>" alt="<?php bloginfo('title') ?>" class="img-responsive">
+                </div>
+                <nav class="nav-container navbar">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Process</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Properties <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Play Your Game</a></li>
+                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="#">What Can Go Wrong</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Blog</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Play Your Game</a></li>
+                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="#">What Can Go Wrong</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        </div>
+    </div>
+</div>

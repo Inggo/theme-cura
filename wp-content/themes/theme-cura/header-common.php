@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <title><?php wp_title(); ?></title>
