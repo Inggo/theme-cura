@@ -12,6 +12,8 @@ class ThemeCura
         add_action('init', array($this, 'registerScripts'));
         add_action('wp_enqueue_scripts', array($this, 'enqueueStyles'));
         add_action('wp_enqueue_scripts', array($this, 'enqueueScripts'));
+        add_action('admin_notices', array($this, 'checkDependencies'));
+        add_action('after_setup_theme', array($this, 'disableAdminBar'));
     }
 
     /**
@@ -27,6 +29,36 @@ class ThemeCura
             'uploads'       => true,
             'default-image' => get_template_directory_uri() . '/images/logo.png',
         ));
+    }
+
+    /**
+     * Show a plugin error
+     * @param  string
+     * @return string
+     */
+    private function __pluginError($plugin)
+    {
+        return '<div class="error"><p>' .
+            __('Warning: The theme needs <strong>' . $plugin . '</strong> to function', 'theme-cura' ) .
+            '</p></div>';
+    }
+
+    /**
+     * Check for theme plugin dependencies
+     */
+    public function checkDependencies()
+    {
+        if (!function_exists('get_field')) {
+            echo $this->__pluginError('Advanced Custom Fields');
+        }
+    }
+
+    /**
+     * Disable the admin bar
+     */
+    public function disableAdminBar()
+    {
+        show_admin_bar(false);
     }
 
     /**

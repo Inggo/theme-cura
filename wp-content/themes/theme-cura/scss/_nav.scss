@@ -1,0 +1,95 @@
+// Navigation styling
+
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+    background: $gray;
+}
+
+.nav > li {
+    a:hover,
+    a:focus {
+        background: $gray;
+        color: $black;
+    }
+}
+
+.header-main {
+    padding: 0 0 0 130px;
+}
+
+.logo-container {
+    width: 120px;
+    margin: 0 0 0 -120px;
+    float: left;
+}
+
+.navbar-header {
+    height: 60px;
+}
+
+.navbar-nav {
+    margin-top: 0;
+}
+
+.nav {
+    float: right;
+
+    > li {
+        font-family: Nexa Bold, sans-serif;
+        font-size: 20px;
+        letter-spacing: 7px;
+        &.dropdown > a {
+            padding-right: 18px;
+        }
+    }
+
+    > li:last-child.dropdown .dropdown-menu {
+        right: 0;
+        left: auto;
+    }
+}
+
+.dropdown-menu {
+    background: $gray;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    @media screen and (min-width: $screen-sm) {
+        min-width: 273px;
+    }
+
+    > li > a {
+        font-family: Nexa Light, sans-serif;
+        letter-spacing: 0;
+        border-bottom: 1px solid $white;
+        color: $dark-gray;
+        line-height: 49px;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    > li:last-child > a {
+        border-bottom: none;
+    }
+}
+
+.dropdown .caret {
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+}
+
+.nav-container {
+    margin-bottom: 0;
+    @media screen and (min-width: $screen-sm) {
+        padding-top: 42px;
+    }
+}
+
+.navbar-collapse {
+    box-shadow: none;
+}

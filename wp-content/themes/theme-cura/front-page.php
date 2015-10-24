@@ -7,15 +7,7 @@
  */
 
 get_header('front');
-?>
 
-<?php if (have_posts()) : ?>
-    <?php while (have_posts()) : ?>
-        <?php the_post(); ?>
-    <?php endwhile; ?>
-<?php else : ?>
-    <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-<?php endif; ?>
+get_template_part('loop');
 
-<?php
 get_footer();

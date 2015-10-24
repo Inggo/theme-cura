@@ -8428,10 +8428,16 @@ body {
 }
 
 .hero {
-	padding: 95px 0;
+	padding: 20px 0;
 	background: #EEE;
 	background-size: cover;
 	background-position: center center;
+}
+
+@media screen and (min-width: 768px) {
+	.hero {
+		padding: 95px 0;
+	}
 }
 
 .hero .icon-bar {
@@ -8446,6 +8452,12 @@ body {
 .hero .nav > li > a:focus {
 	background: #CDCED0;
 	color: #000;
+}
+
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+	background: #CDCED0;
 }
 
 .nav > li a:hover,
@@ -8466,6 +8478,10 @@ body {
 
 .navbar-header {
 	height: 60px;
+}
+
+.navbar-nav {
+	margin-top: 0;
 }
 
 .nav {
@@ -8493,7 +8509,12 @@ body {
 	border: none;
 	border-radius: 0;
 	padding: 0;
-	min-width: 273px;
+}
+
+@media screen and (min-width: 768px) {
+	.dropdown-menu {
+		min-width: 273px;
+	}
 }
 
 .dropdown-menu > li > a {
@@ -8516,4 +8537,14 @@ body {
 	position: absolute;
 	top: 50%;
 	margin-top: -2px;
+}
+
+.nav-container {
+	margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.nav-container {
+		padding-top: 42px;
+	}
 }
