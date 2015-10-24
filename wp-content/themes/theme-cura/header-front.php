@@ -14,8 +14,8 @@
 <div class="subheading">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
-                <h2 class="front-page-subheading"><?=get_field('subheading');?></h2>
+            <div class="col-xs-12 front-page-subheading">
+                <?=get_field('subheading');?>
             </div>
         </div>
     </div>

@@ -1,11 +1,15 @@
-<?php namespace Inggo\WordPress;
+<?php namespace Inggo\WordPress\ThemeCura;
+
+use Inggo\WordPress\ThemeHelper;
+use Inggo\WordPress\ThemeCustomizerInterface;
 
 class ThemeCura
 {
     private $theme_data;
     public $helper;
+    public $customizer;
 
-    public function __construct(ThemeHelper $helper)
+    public function __construct(ThemeHelper $helper, ThemeCustomizerInterface $customizer)
     {
         $this->theme_data = \wp_get_theme();
         \add_action('after_setup_theme', array($this, 'setup'));
@@ -16,6 +20,8 @@ class ThemeCura
         \add_action('admin_notices', array($this, 'checkDependencies'));
         \add_action('after_setup_theme', array($this, 'disableAdminBar'));
         $this->helper = $helper;
+        $this->customizer = $customizer;
+        add_action('customize_register', array($this->customizer, 'register'));
     }
 
     /**

@@ -1412,7 +1412,7 @@ html {
 }
 
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: Nexa Light, sans-serif;
 	font-size: 14px;
 	line-height: 1.42857143;
 	color: #333333;
@@ -1525,7 +1525,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-	font-family: inherit;
+	font-family: Nexa Bold, sans-serif;
 	font-weight: 500;
 	line-height: 1.1;
 	color: inherit;
@@ -7556,7 +7556,7 @@ button.close {
 	position: absolute;
 	z-index: 1070;
 	display: block;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: Nexa Light, sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	letter-spacing: normal;
@@ -7690,7 +7690,7 @@ button.close {
 	display: none;
 	max-width: 276px;
 	padding: 1px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: Nexa Light, sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	letter-spacing: normal;
@@ -8423,8 +8423,9 @@ button.close {
 	src: url("fonts/nexa_light.eot?#iefix") format("embedded-opentype"), url("fonts/nexa_light.woff") format("woff"), url("fonts/nexa_light.ttf") format("truetype"), url("fonts/nexa_light.svg#Nexa Light") format("svg");
 }
 
-body {
-	font-family: Nexa Light, sans-serif;
+.container-main {
+	padding-top: 110px;
+	padding-bottom: 110px;
 }
 
 .nav .open > a,
@@ -8537,18 +8538,22 @@ body {
 		font-size: 16px;
 		letter-spacing: 3px;
 	}
+
+	.navbar-nav .open .dropdown-menu > li > a {
+		font-size: 15px;
+	}
 }
 
 @media screen and (min-width: 992px) {
 	.nav > li {
-		font-size: 18px;
+		font-size: 20px;
 		letter-spacing: 5px;
 	}
 }
 
 @media screen and (min-width: 1350px) {
 	.nav > li {
-		font-size: 20px;
+		font-size: 25px;
 		letter-spacing: 7px;
 	}
 }
@@ -8623,10 +8628,9 @@ body {
 }
 
 .hero .front-page-heading {
-	font-family: Nexa Bold, sans-serif;
 	font-weight: bold;
-	line-height: 42px;
-	font-size: 22px;
+	line-height: 45px;
+	font-size: 27px;
 	letter-spacing: 5px;
 	color: #FDD304;
 }
@@ -8638,10 +8642,16 @@ body {
 
 .home .subheading .front-page-subheading {
 	font-family: Nexa Bold, sans-serif;
-	line-height: 45px;
-	font-size: 25px;
+	line-height: 50px;
+	font-size: 32px;
 	letter-spacing: 1px;
 	color: #2F3B48;
+}
+
+.home .container-main h2 {
+	font-size: 33px;
+	letter-spacing: 3px;
+	font-weight: bold;
 }
 
 .video-container {

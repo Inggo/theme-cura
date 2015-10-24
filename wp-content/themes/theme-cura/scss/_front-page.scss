@@ -63,10 +63,9 @@
     }
 
     .front-page-heading {
-        font-family: Nexa Bold, sans-serif;
         font-weight: bold;
-        line-height: 42px;
-        font-size: 22px;
+        line-height: 45px;
+        font-size: 27px;
         letter-spacing: 5px;
         color: $yellow;
     }
@@ -77,10 +76,16 @@
     padding: 85px 0;
 
     .front-page-subheading {
-        font-family: Nexa Bold, sans-serif;
-        line-height: 45px;
-        font-size: 25px;
+        font-family: $headings-font-family;
+        line-height: 50px;
+        font-size: 32px;
         letter-spacing: 1px;
         color: $dark-gray;
     }
+}
+
+.home .container-main h2 {
+    font-size: 33px;
+    letter-spacing: 3px;
+    font-weight: bold;
 }
