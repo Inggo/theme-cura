@@ -8427,33 +8427,6 @@ body {
 	font-family: Nexa Light, sans-serif;
 }
 
-.hero {
-	padding: 20px 0;
-	background: #EEE;
-	background-size: cover;
-	background-position: center center;
-}
-
-@media screen and (min-width: 768px) {
-	.hero {
-		padding: 95px 0;
-	}
-}
-
-.hero .icon-bar {
-	background: #000;
-}
-
-.hero .nav > li > a {
-	color: #FFF;
-}
-
-.hero .nav > li > a:hover,
-.hero .nav > li > a:focus {
-	background: #CDCED0;
-	color: #000;
-}
-
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
@@ -8481,21 +8454,22 @@ body {
 }
 
 .navbar-nav {
-	margin-top: 0;
+	margin: 0 -15px;
 }
 
 .nav {
 	float: right;
+	min-width: 160px;
 }
 
 .nav > li {
 	font-family: Nexa Bold, sans-serif;
-	font-size: 20px;
-	letter-spacing: 7px;
+	font-size: 14px;
+	letter-spacing: 3px;
 }
 
 .nav > li.dropdown > a {
-	padding-right: 18px;
+	padding-right: 23px;
 }
 
 .nav > li:last-child.dropdown .dropdown-menu {
@@ -8509,12 +8483,6 @@ body {
 	border: none;
 	border-radius: 0;
 	padding: 0;
-}
-
-@media screen and (min-width: 768px) {
-	.dropdown-menu {
-		min-width: 273px;
-	}
 }
 
 .dropdown-menu > li > a {
@@ -8539,12 +8507,111 @@ body {
 	margin-top: -2px;
 }
 
+.navbar-collapse {
+	box-shadow: none;
+}
+
 .nav-container {
 	margin-bottom: 0;
 }
 
+.navbar-nav .open .dropdown-menu {
+	background: #CDCED0;
+}
+
+.navbar-nav .open .dropdown-menu > li > a {
+	font-size: 12px;
+	padding: 3px 15px;
+}
+
 @media screen and (min-width: 768px) {
+	.dropdown-menu {
+		min-width: 273px;
+	}
+
 	.nav-container {
 		padding-top: 42px;
+	}
+
+	.nav > li {
+		font-size: 16px;
+		letter-spacing: 3px;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.nav > li {
+		font-size: 18px;
+		letter-spacing: 5px;
+	}
+}
+
+@media screen and (min-width: 1350px) {
+	.nav > li {
+		font-size: 20px;
+		letter-spacing: 7px;
+	}
+}
+
+.hero {
+	padding: 150px 0;
+	background: #EEE;
+	background-size: cover;
+	background-position: center center;
+}
+
+.hero .icon-bar {
+	background: #2F3B48;
+}
+
+.hero .nav > li > a {
+	color: #2F3B48;
+}
+
+.hero .nav > li > a:hover,
+.hero .nav > li > a:focus {
+	background: #CDCED0;
+	color: #000;
+}
+
+.hero > .container {
+	margin-top: -150px;
+	background: #FFF;
+}
+
+.hero .header-main {
+	padding: 15px 0 15px 120px;
+}
+
+@media screen and (min-width: 768px) {
+	.hero {
+		padding: 20px 0;
+	}
+
+	.hero .nav > li > a {
+		color: #FFF;
+	}
+
+	.hero > .container {
+		margin-top: 0;
+		background: transparent;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.hero {
+		padding: 25px 0;
+	}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1349px) {
+	.hero {
+		padding: 45px 0;
+	}
+}
+
+@media screen and (min-width: 1350px) {
+	.hero {
+		padding: 95px 0;
 	}
 }

@@ -1,0 +1,57 @@
+// Front-page styling
+.hero {
+    padding: 150px 0;
+    background: $light-gray;
+    background-size: cover;
+    background-position: center center;
+
+    .icon-bar {
+        background: $dark-gray;
+    }
+
+    .nav > li > a {
+        color: $dark-gray;
+    }
+
+    .nav > li {
+        > a:hover,
+        > a:focus {
+            background: $gray;
+            color: $black;
+        }
+    }
+
+    > .container {
+        margin-top: -150px;
+        background: $white;
+    }
+
+    .header-main {
+        padding: 15px 0 15px 120px;
+    }
+
+    @media screen and (min-width: $screen-sm) {   
+        padding: 20px 0;
+
+        .nav > li > a {
+            color: $white;
+        }
+
+        > .container {
+            margin-top: 0;
+            background: transparent;
+        }
+    }
+
+    @media screen and (min-width: $screen-md) {
+        padding: 25px 0;
+    }
+
+    @media screen and (min-width: $screen-md) and (max-width: $screen-lg - 1) {
+        padding: 45px 0;
+    }
+
+    @media screen and (min-width: $screen-lg) {
+        padding: 95px 0;
+    }
+}

@@ -29,18 +29,19 @@
 }
 
 .navbar-nav {
-    margin-top: 0;
+    margin: 0 -15px;
 }
 
 .nav {
     float: right;
+    min-width: 160px;
 
     > li {
         font-family: Nexa Bold, sans-serif;
-        font-size: 20px;
-        letter-spacing: 7px;
+        font-size: 14px;
+        letter-spacing: 3px;
         &.dropdown > a {
-            padding-right: 18px;
+            padding-right: 23px;
         }
     }
 
@@ -56,9 +57,6 @@
     border: none;
     border-radius: 0;
     padding: 0;
-    @media screen and (min-width: $screen-sm) {
-        min-width: 273px;
-    }
 
     > li > a {
         font-family: Nexa Light, sans-serif;
@@ -83,13 +81,49 @@
     margin-top: -2px;
 }
 
+.navbar-collapse {
+    box-shadow: none;
+}
+
 .nav-container {
     margin-bottom: 0;
-    @media screen and (min-width: $screen-sm) {
+}
+
+.navbar-nav .open .dropdown-menu {
+    background: $gray;
+
+    > li > a {
+        font-size: 12px;
+        padding: 3px 15px;
+    }
+
+}
+
+@media screen and (min-width: $screen-sm) {
+    .dropdown-menu {
+        min-width: 273px;
+    }
+
+    .nav-container {
         padding-top: 42px;
+    }
+
+    .nav > li {
+        font-size: 16px;
+        letter-spacing: 3px;
     }
 }
 
-.navbar-collapse {
-    box-shadow: none;
+@media screen and (min-width: $screen-md) {
+    .nav > li {
+        font-size: 18px;
+        letter-spacing: 5px;
+    }   
+}
+
+@media screen and (min-width: $screen-lg) {
+    .nav > li {
+        font-size: 20px;
+        letter-spacing: 7px;
+    }
 }
