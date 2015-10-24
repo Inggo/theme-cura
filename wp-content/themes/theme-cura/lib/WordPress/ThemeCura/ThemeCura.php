@@ -1,17 +1,22 @@
 <?php namespace Inggo\WordPress\ThemeCura;
 
 use Inggo\WordPress\ThemeHelper;
-use Inggo\WordPress\ThemeCustomizerInterface;
+use Inggo\WordPress\CustomizerInterface;
+use Inggo\WordPress\ThemeCura\CustomPostRegistrar;
 
 class ThemeCura
 {
     private $theme_data;
     public $helper;
     public $customizer;
+    public $cpt_registrar;
 
-    public function __construct(ThemeHelper $helper, ThemeCustomizerInterface $customizer)
+    public function __construct(ThemeHelper $helper, CustomizerInterface $customizer)
     {
         $this->theme_data = \wp_get_theme();
+        $this->helper = $helper;
+        $this->customizer = $customizer;
+        
         \add_action('after_setup_theme', array($this, 'setup'));
         \add_action('init', array($this, 'registerStyles'));
         \add_action('init', array($this, 'registerScripts'));
@@ -19,9 +24,8 @@ class ThemeCura
         \add_action('wp_enqueue_scripts', array($this, 'enqueueScripts'));
         \add_action('admin_notices', array($this, 'checkDependencies'));
         \add_action('after_setup_theme', array($this, 'disableAdminBar'));
-        $this->helper = $helper;
-        $this->customizer = $customizer;
-        add_action('customize_register', array($this->customizer, 'register'));
+        \add_action('customize_register', array($this->customizer, 'register'));
+        \add_action('init', array($this, 'registerPostTypes'));
     }
 
     /**
@@ -37,6 +41,15 @@ class ThemeCura
             'uploads'       => true,
             'default-image' => \get_template_directory_uri() . '/images/logo.png',
         ));
+    }
+
+    /**
+     * Register Custom Post Types
+     */
+    public function registerPostTypes()
+    {
+        $this->cpt_registrar = new CustomPostRegistrar();
+        $this->cpt_registrar->register();
     }
 
     /**

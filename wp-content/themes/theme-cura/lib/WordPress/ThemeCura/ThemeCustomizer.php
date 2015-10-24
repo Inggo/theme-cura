@@ -1,9 +1,9 @@
 <?php namespace Inggo\WordPress\ThemeCura;
 
-use Inggo\WordPress\ThemeCustomizerInterface;
+use Inggo\WordPress\CustomizerInterface;
 use Inggo\WordPress\ThemeCustomizeHelper;
 
-class ThemeCustomizer implements ThemeCustomizerInterface
+class ThemeCustomizer implements CustomizerInterface
 {
     // Reference to the ThemeCustomizeHelper object
     protected $ch;
