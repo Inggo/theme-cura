@@ -7,15 +7,11 @@
  */
 
 get_header();
+
 ?>
-
-<?php if (have_posts()) : ?>
-    <?php while (have_posts()) : ?>
-        <?php the_post(); ?>
-    <?php endwhile; ?>
-<?php else : ?>
-    <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-<?php endif; ?>
-
+<div class="content-divider"></div>
 <?php
+
+get_template_part('loop');
+
 get_footer();

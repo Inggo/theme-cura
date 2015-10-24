@@ -2,7 +2,7 @@
 
 <div class="hero" style="background-image: url(<?php the_field('hero_background'); ?>)">
 	<?php get_template_part('nav'); ?>
-    <?php get_template_part('youtube', 'full'); ?>
+    <?php get_template_part('content', 'video'); ?>
     <div class="container">
         <div class="row">
             <div class="col-xs-12">

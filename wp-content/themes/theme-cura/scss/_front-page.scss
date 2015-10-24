@@ -6,22 +6,6 @@
     background-size: cover;
     background-position: center center;
 
-    .icon-bar {
-        background: $dark-gray;
-    }
-
-    .nav > li > a {
-        color: $dark-gray;
-    }
-
-    .nav > li {
-        > a:hover,
-        > a:focus {
-            background: $light-gray;
-            color: $black;
-        }
-    }
-
     > .nav-header-container {
         margin-top: -150px;
         background: $white;
@@ -89,4 +73,8 @@
     letter-spacing: 3px;
     font-weight: bold;
     margin: 0 0 75px;
+}
+
+.home .page-wrapper {
+    padding-top: 0;
 }

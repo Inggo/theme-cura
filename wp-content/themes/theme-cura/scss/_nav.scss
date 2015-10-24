@@ -1,4 +1,19 @@
 // Navigation styling
+.icon-bar {
+    background: $dark-gray;
+}
+
+.nav > li > a {
+    color: $dark-gray;
+}
+
+.nav > li {
+    > a:hover,
+    > a:focus {
+        background: $light-gray;
+        color: $black;
+    }
+}
 
 .nav .open > a,
 .nav .open > a:hover,

@@ -8423,9 +8423,27 @@ button.close {
 	src: url("fonts/nexa_light.eot?#iefix") format("embedded-opentype"), url("fonts/nexa_light.woff") format("woff"), url("fonts/nexa_light.ttf") format("truetype"), url("fonts/nexa_light.svg#Nexa Light") format("svg");
 }
 
+h1 {
+	color: #FDD304;
+	text-transform: uppercase;
+	font-size: 62px;
+	font-weight: bold;
+	letter-spacing: 14px;
+}
+
 .container-main {
 	padding-top: 110px;
 	padding-bottom: 110px;
+}
+
+.page-wrapper {
+	padding-top: 110px;
+}
+
+.content-divider {
+	border-top: 1px solid #FDD304;
+	border-bottom: 1px solid #FEDC5E;
+	margin-top: 20px;
 }
 
 .icon-location {
@@ -8514,6 +8532,20 @@ button.close {
 	width: 39px;
 	height: 34px;
 	display: inline-block;
+}
+
+.icon-bar {
+	background: #2F3B48;
+}
+
+.nav > li > a {
+	color: #2F3B48;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+	background: #CDCED0;
+	color: #000;
 }
 
 .nav .open > a,
@@ -8720,20 +8752,6 @@ button.close {
 	background-position: center center;
 }
 
-.hero .icon-bar {
-	background: #2F3B48;
-}
-
-.hero .nav > li > a {
-	color: #2F3B48;
-}
-
-.hero .nav > li > a:hover,
-.hero .nav > li > a:focus {
-	background: #CDCED0;
-	color: #000;
-}
-
 .hero > .nav-header-container {
 	margin-top: -150px;
 	background: #FFF;
@@ -8807,6 +8825,10 @@ button.close {
 	letter-spacing: 3px;
 	font-weight: bold;
 	margin: 0 0 75px;
+}
+
+.home .page-wrapper {
+	padding-top: 0;
 }
 
 .video-container {
