@@ -60,7 +60,7 @@ class ThemeCura
         ));
 
         // Add thumbnail support
-        \add_theme_support('post-thumbnails', array('post', 'cura_property', 'cura_video'));
+        \add_theme_support('post-thumbnails', array('post', 'cura_property', 'cura_video', 'cura_process'));
 
         // Add menus support
         \add_theme_support('menus');

@@ -19,6 +19,7 @@ require_once('lib/WordPress/ThemeCura/ShortcodesRegistrar.php');
 // Require Shortcodes
 require_once('lib/WordPress/ThemeCura/Shortcodes/GenericShortcode.php');
 require_once('lib/WordPress/ThemeCura/Shortcodes/CuraPropertiesShortcode.php');
+require_once('lib/WordPress/ThemeCura/Shortcodes/CuraProcessesShortcode.php');
 
 // Require 3rd-party Classes
 require_once('lib/wp_bootstrap_navwalker.php');

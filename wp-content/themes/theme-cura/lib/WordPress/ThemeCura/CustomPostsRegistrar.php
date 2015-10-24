@@ -11,6 +11,7 @@ class CustomPostsRegistrar implements CustomPostsRegistrarInterface
     {
         $this->registerPropertyCPT();
         $this->registerVideoCPT();
+        $this->registerProcessCPT();
     }
 
     /**
@@ -19,26 +20,27 @@ class CustomPostsRegistrar implements CustomPostsRegistrarInterface
     private function registerPropertyCPT()
     {
         $labels = array(
-            "name" => "Properties",
+            "all_items"     => "All Properties",
+            "name"          => "Properties",
             "singular_name" => "Property",
         );
 
         $args = array(
-            "labels" => $labels,
-            "description" => "",
-            "public" => true,
-            "show_ui" => true,
-            "has_archive" => false,
-            "show_in_menu" => true,
+            "labels"              => $labels,
+            "description"         => "",
+            "public"              => true,
+            "show_ui"             => true,
+            "has_archive"         => false,
+            "show_in_menu"        => true,
             "exclude_from_search" => false,
-            "capability_type" => "post",
-            "map_meta_cap" => true,
-            "hierarchical" => false,
-            "rewrite" => false,
-            "query_var" => true,
-            "menu_position" => 20,
-            "menu_icon" => "dashicons-admin-multisite",
-            "supports" => array("title", "thumbnail", "page-attributes"),
+            "capability_type"     => "post",
+            "map_meta_cap"        => true,
+            "hierarchical"        => false,
+            "rewrite"             => false,
+            "query_var"           => true,
+            "menu_position"       => 20,
+            "menu_icon"           => "dashicons-admin-multisite",
+            "supports"            => array("title", "thumbnail", "page-attributes"),
         );
 
         \register_post_type('cura_property', $args);
@@ -50,28 +52,62 @@ class CustomPostsRegistrar implements CustomPostsRegistrarInterface
     private function registerVideoCPT()
     {
         $labels = array(
-            "name" => "Videos",
+            "all_items"     => "All Videos",
+            "name"          => "Videos",
             "singular_name" => "Video",
         );
 
         $args = array(
-            "labels" => $labels,
-            "description" => "",
-            "public" => true,
-            "show_ui" => true,
-            "has_archive" => false,
-            "show_in_menu" => true,
+            "labels"              => $labels,
+            "description"         => "",
+            "public"              => true,
+            "show_ui"             => true,
+            "has_archive"         => false,
+            "show_in_menu"        => true,
             "exclude_from_search" => false,
-            "capability_type" => "post",
-            "map_meta_cap" => true,
-            "hierarchical" => false,
-            "rewrite" => false,
-            "query_var" => true,
-            "menu_position" => 21,
-            "menu_icon" => "dashicons-format-video",
-            "supports" => array("title", "thumbnail"),
+            "capability_type"     => "post",
+            "map_meta_cap"        => true,
+            "hierarchical"        => false,
+            "rewrite"             => false,
+            "query_var"           => true,
+            "menu_position"       => 21,
+            "menu_icon"           => "dashicons-format-video",
+            "supports"            => array("title", "thumbnail"),
         );
 
         \register_post_type('cura_video', $args);
     }
+
+    /**
+     * Register the cura_process CPT
+     */
+    private function registerProcessCPT()
+    {
+        $labels = array(
+            "all_items"     => "All Processes",
+            "name"          => "Processes",
+            "singular_name" => "Process",
+        );
+
+        $args = array(
+            "labels"              => $labels,
+            "description"         => "",
+            "public"              => true,
+            "show_ui"             => true,
+            "has_archive"         => false,
+            "show_in_menu"        => true,
+            "exclude_from_search" => false,
+            "capability_type"     => "post",
+            "map_meta_cap"        => true,
+            "hierarchical"        => false,
+            "rewrite"             => false,
+            "query_var"           => true,
+            "menu_position"       => 22,
+            "menu_icon"           => "dashicons-controls-repeat",
+            "supports"            => array("title", "editor", "thumbnail"),
+        );
+
+        \register_post_type('cura_process', $args);
+    }
+    
 }

@@ -8,6 +8,6 @@
 
 get_header('front');
 
-get_template_part('loop');
+get_template_part('loop', 'page');
 
 get_footer();

@@ -2,6 +2,7 @@
 
 use Inggo\WordPress\ShortcodesRegistrarInterface;
 use Inggo\WordPress\ThemeCura\Shortcodes\CuraPropertiesShortcode;
+use Inggo\WordPress\ThemeCura\Shortcodes\CuraProcessesShortcode;
 
 class ShortcodesRegistrar implements ShortcodesRegistrarInterface
 {
@@ -12,6 +13,7 @@ class ShortcodesRegistrar implements ShortcodesRegistrarInterface
      */
     public function register()
     {
-        $shortcodes[] = new CuraPropertiesShortcode();
+        $this->shortcodes[] = new CuraPropertiesShortcode();
+        $this->shortcodes[] = new CuraProcessesShortcode();
     }
 }
