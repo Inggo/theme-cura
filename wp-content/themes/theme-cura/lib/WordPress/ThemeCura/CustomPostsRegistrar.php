@@ -17,6 +17,7 @@ class CustomPostsRegistrar implements CustomPostsRegistrarInterface
         $this->registerVideoCPT();
         $this->registerProcessCPT();
         $this->registerTeamMemberCPT();
+        $this->registerTestimonialCPT();
         $this->registerReasonCPT();
     }
 
@@ -172,6 +173,38 @@ class CustomPostsRegistrar implements CustomPostsRegistrarInterface
     }
 
     /**
+     * Register the cura_testimonial CPT
+     */
+    private function registerTestimonialCPT()
+    {
+        $labels = array(
+            "all_items"     => "All Testimonials",
+            "name"          => "Testimonials",
+            "singular_name" => "Testimonial",
+        );
+
+        $args = array(
+            "labels"              => $labels,
+            "description"         => "",
+            "public"              => true,
+            "show_ui"             => true,
+            "has_archive"         => false,
+            "show_in_menu"        => true,
+            "exclude_from_search" => false,
+            "capability_type"     => "post",
+            "map_meta_cap"        => true,
+            "hierarchical"        => false,
+            "rewrite"             => false,
+            "query_var"           => true,
+            "menu_position"       => 23,
+            "menu_icon"           => "dashicons-thumbs-up",
+            "supports"            => array("title", "editor", "thumbnail", "page-attributes"),
+        );
+
+        \register_post_type('cura_testimonial', $args);
+    }
+
+    /**
      * Register the cura_reason CPT
      */
     private function registerReasonCPT()
@@ -195,8 +228,8 @@ class CustomPostsRegistrar implements CustomPostsRegistrarInterface
             "hierarchical"        => false,
             "rewrite"             => false,
             "query_var"           => true,
-            "menu_position"       => 23,
-            "menu_icon"           => "dashicons-groups",
+            "menu_position"       => 25,
+            "menu_icon"           => "dashicons-editor-help",
             "supports"            => array("title", "thumbnail", "page-attributes"),
             "taxonomies"          => array("cura_type"),
         );

@@ -6,6 +6,7 @@ use Inggo\WordPress\ThemeCura\Shortcodes\CuraProcessesShortcode;
 use Inggo\WordPress\ThemeCura\Shortcodes\CuraTeamShortcode;
 use Inggo\WordPress\ThemeCura\Shortcodes\CuraBoxShortcode;
 use Inggo\WordPress\ThemeCura\Shortcodes\CuraReasonsShortcode;
+use Inggo\WordPress\ThemeCura\Shortcodes\CuraTestimonialsShortcode;
 
 class ShortcodesRegistrar implements ShortcodesRegistrarInterface
 {
@@ -21,5 +22,6 @@ class ShortcodesRegistrar implements ShortcodesRegistrarInterface
         $this->shortcodes[] = new CuraTeamShortcode();
         $this->shortcodes[] = new CuraBoxShortcode();
         $this->shortcodes[] = new CuraReasonsShortcode();
+        $this->shortcodes[] = new CuraTestimonialsShortcode();
     }
 }

@@ -8525,7 +8525,7 @@ button.close {
 
 .icon-location {
 	background: url("./images/sprites.png");
-	background-position: -0px -73px;
+	background-position: -141px -0px;
 	width: 30px;
 	height: 38px;
 	display: inline-block;
@@ -8533,7 +8533,7 @@ button.close {
 
 .icon-phone {
 	background: url("./images/sprites.png");
-	background-position: -30px -73px;
+	background-position: -141px -38px;
 	width: 30px;
 	height: 38px;
 	display: inline-block;
@@ -8541,7 +8541,7 @@ button.close {
 
 .icon-mail {
 	background: url("./images/sprites.png");
-	background-position: -60px -73px;
+	background-position: -102px -70px;
 	width: 38px;
 	height: 29px;
 	display: inline-block;
@@ -8549,7 +8549,7 @@ button.close {
 
 .icon-social_facebook {
 	background: url("./images/sprites.png");
-	background-position: -156px -0px;
+	background-position: -171px -57px;
 	width: 20px;
 	height: 38px;
 	display: inline-block;
@@ -8557,7 +8557,7 @@ button.close {
 
 .icon-social_google {
 	background: url("./images/sprites.png");
-	background-position: -40px -0px;
+	background-position: -0px -62px;
 	width: 41px;
 	height: 38px;
 	display: inline-block;
@@ -8565,7 +8565,7 @@ button.close {
 
 .icon-social_instagram {
 	background: url("./images/sprites.png");
-	background-position: -81px -36px;
+	background-position: -0px -100px;
 	width: 35px;
 	height: 35px;
 	display: inline-block;
@@ -8573,7 +8573,7 @@ button.close {
 
 .icon-social_linkedin {
 	background: url("./images/sprites.png");
-	background-position: -81px -0px;
+	background-position: -102px -34px;
 	width: 36px;
 	height: 36px;
 	display: inline-block;
@@ -8581,7 +8581,7 @@ button.close {
 
 .icon-social_twitter {
 	background: url("./images/sprites.png");
-	background-position: -0px -39px;
+	background-position: -41px -62px;
 	width: 42px;
 	height: 34px;
 	display: inline-block;
@@ -8589,7 +8589,7 @@ button.close {
 
 .icon-twitter-yellow {
 	background: url("./images/sprites.png");
-	background-position: -117px -82px;
+	background-position: -35px -135px;
 	width: 33px;
 	height: 26px;
 	display: inline-block;
@@ -8597,7 +8597,7 @@ button.close {
 
 .icon-linkedin-yellow {
 	background: url("./images/sprites.png");
-	background-position: -30px -111px;
+	background-position: -171px -95px;
 	width: 27px;
 	height: 27px;
 	display: inline-block;
@@ -8605,7 +8605,7 @@ button.close {
 
 .icon-facebook-yellow {
 	background: url("./images/sprites.png");
-	background-position: -156px -38px;
+	background-position: -171px -122px;
 	width: 16px;
 	height: 27px;
 	display: inline-block;
@@ -8613,7 +8613,7 @@ button.close {
 
 .icon-google-yellow {
 	background: url("./images/sprites.png");
-	background-position: -0px -111px;
+	background-position: -171px -30px;
 	width: 30px;
 	height: 27px;
 	display: inline-block;
@@ -8621,7 +8621,7 @@ button.close {
 
 .icon-email-yellow {
 	background: url("./images/sprites.png");
-	background-position: -117px -25px;
+	background-position: -0px -135px;
 	width: 35px;
 	height: 27px;
 	display: inline-block;
@@ -8629,7 +8629,7 @@ button.close {
 
 .icon-print-yellow {
 	background: url("./images/sprites.png");
-	background-position: -117px -52px;
+	background-position: -171px -0px;
 	width: 31px;
 	height: 30px;
 	display: inline-block;
@@ -8637,7 +8637,7 @@ button.close {
 
 .icon-bed {
 	background: url("./images/sprites.png");
-	background-position: -117px -0px;
+	background-position: -35px -100px;
 	width: 39px;
 	height: 25px;
 	display: inline-block;
@@ -8645,7 +8645,7 @@ button.close {
 
 .icon-bath {
 	background: url("./images/sprites.png");
-	background-position: -0px -0px;
+	background-position: -62px -0px;
 	width: 40px;
 	height: 39px;
 	display: inline-block;
@@ -8653,7 +8653,7 @@ button.close {
 
 .icon-parking {
 	background: url("./images/sprites.png");
-	background-position: -42px -39px;
+	background-position: -102px -0px;
 	width: 39px;
 	height: 34px;
 	display: inline-block;
@@ -8661,7 +8661,7 @@ button.close {
 
 .icon-caret-up {
 	background: url("./images/sprites.png");
-	background-position: -57px -111px;
+	background-position: -62px -39px;
 	width: 33px;
 	height: 12px;
 	display: inline-block;
@@ -8669,9 +8669,17 @@ button.close {
 
 .icon-caret-down {
 	background: url("./images/sprites.png");
-	background-position: -90px -111px;
+	background-position: -74px -100px;
 	width: 33px;
 	height: 12px;
+	display: inline-block;
+}
+
+.icon-play {
+	background: url("./images/sprites.png");
+	background-position: -0px -0px;
+	width: 62px;
+	height: 62px;
 	display: inline-block;
 }
 
@@ -8802,7 +8810,7 @@ button.close {
 
 @media screen and (min-width: 768px) {
 	.dropdown-menu {
-		min-width: 273px;
+		min-width: 100%;
 	}
 
 	.nav-container {
@@ -9217,6 +9225,120 @@ button.close {
 }
 
 @media screen {
+	.cura-testimonial {
+		overflow: hidden;
+		padding-bottom: 220px;
+		border-bottom: 1px solid #2F3B48;
+		margin: 95px 0;
+		position: relative;
+		text-align: center;
+	}
+
+	.cura-testimonial .testimonial-image {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	.cura-testimonial .testimonial-image img {
+		max-width: 300px;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.cura-testimonial h3 {
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-weight: bold;
+		margin: 0 0 30px;
+	}
+
+	.cura-testimonial p {
+		font-family: Nexa Bold, sans-serif;
+		font-weight: bold;
+		letter-spacing: 3px;
+		margin: 0 0 30px;
+	}
+
+	.testimonial-video-button {
+		border: 7px solid #FDD304;
+		font-family: Nexa Bold, sans-serif;
+		font-weight: bold;
+		font-size: 30px;
+		line-height: 35px;
+		text-transform: uppercase;
+		overflow: hidden;
+		display: inline-block;
+		position: relative;
+	}
+
+	.testimonial-video-button a {
+		color: #FDD304;
+	}
+
+	.testimonial-video-button .thumbnail-container {
+		width: 155px;
+		height: 100px;
+		position: relative;
+	}
+
+	.testimonial-video-button .thumbnail-container .play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -31px 0 0 -31px;
+	}
+
+	.testimonial-video-button .testimonial-video-label {
+		display: block;
+		padding: 15px 0;
+		text-align: center;
+		width: 155px;
+	}
+}
+
+@media screen and (min-width: 480px) {
+	.cura-testimonial {
+		padding-bottom: 440px;
+	}
+
+	.cura-testimonial .testimonial-image img {
+		max-width: 600px;
+	}
+
+	.testimonial-video-button .testimonial-video-label,
+	.testimonial-video-button .thumbnail-container {
+		float: left;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.cura-testimonial-container:nth-child(odd) .cura-testimonial {
+		padding: 0 0 0 620px;
+	}
+
+	.cura-testimonial-container:nth-child(odd) .cura-testimonial .testimonial-image {
+		left: 0;
+		right: auto;
+	}
+
+	.cura-testimonial-container:nth-child(even) .cura-testimonial {
+		padding: 0 620px 0 0;
+	}
+
+	.cura-testimonial-container:nth-child(even) .cura-testimonial .testimonial-image {
+		right: 0;
+		left: auto;
+	}
+
+	.cura-testimonial-container .cura-testimonial {
+		min-height: 400px;
+		text-align: left;
+	}
+}
+
+@media screen {
 	.cura-reason {
 		border: 2px solid #FDD304;
 		text-align: center;
@@ -9499,17 +9621,18 @@ button.close {
 	}
 }
 
-.what-can-go-wrong h2,
-.play-your-game h2 {
+.page.play-your-game h2,
+.page.testimonials h2,
+.page.what-can-go-wrong h2 {
 	margin-top: 100px;
 	font-size: 36px;
 }
 
-.what-can-go-wrong h2 {
+.page.what-can-go-wrong h2 {
 	margin-bottom: 100px;
 }
 
-.what-can-go-wrong h3 {
+.page.what-can-go-wrong h3 {
 	margin: 100px 0 30px;
 }
 

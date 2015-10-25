@@ -77,12 +77,14 @@ class ThemeCura
     {
         $array = array(
             // List all possible opening shortcodes
-            '<p>[cura_properties' => '[cura_properties',
-            '<p>[cura_processes'  => '[cura_processes',
-            '<p>[cura_video'      => '[cura_video',
-            '<p>[cura_team'       => '[cura_team',
-            '<p>[cura_box'        => '[cura_box',
-            '<p>[/cura_box'       => '[/cura_box',
+            '<p>[cura_properties'   => '[cura_properties',
+            '<p>[cura_processes'    => '[cura_processes',
+            '<p>[cura_video'        => '[cura_video',
+            '<p>[cura_team'         => '[cura_team',
+            '<p>[cura_box'          => '[cura_box',
+            '<p>[/cura_box'         => '[/cura_box',
+            '<p>[cura_reason'       => '[cura_reason',
+            '<p>[cura_testimonials' => '[cura_testimonials',
             // Fix for closing </p>
             ']</p>'   => ']',
             ']<br />' => ']',
@@ -112,7 +114,8 @@ class ThemeCura
         \set_post_thumbnail_size(396, 190);
 
         // Add custom image sizes
-        \add_image_size('cura_team_member', 212, 282, array('center', 'center'));
+        \add_image_size('cura_team_member', 212, 282, true);
+        \add_image_size('cura_testimonial', 600, 400, true);
 
         // Add menus support
         \add_theme_support('menus');

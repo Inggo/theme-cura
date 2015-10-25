@@ -23,6 +23,7 @@ require_once('lib/WordPress/ThemeCura/Shortcodes/CuraProcessesShortcode.php');
 require_once('lib/WordPress/ThemeCura/Shortcodes/CuraTeamShortcode.php');
 require_once('lib/WordPress/ThemeCura/Shortcodes/CuraBoxShortcode.php');
 require_once('lib/WordPress/ThemeCura/Shortcodes/CuraReasonsShortcode.php');
+require_once('lib/WordPress/ThemeCura/Shortcodes/CuraTestimonialsShortcode.php');
 
 // Require 3rd-party Classes
 require_once('lib/wp_bootstrap_navwalker.php');

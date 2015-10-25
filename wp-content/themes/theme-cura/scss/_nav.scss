@@ -123,12 +123,12 @@
             font-size: 12px;
             padding: 3px 15px;
         }
-    }    
+    }
 }
 
 @media screen and (min-width: $screen-sm) {
     .dropdown-menu {
-        min-width: 273px;
+        min-width: 100%;
     }
 
     .nav-container {

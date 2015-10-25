@@ -6,7 +6,7 @@ foreach ($posts as $i => $post) {
 ?>
 <div class="col-xs-12">
     <div class="cura-team-member">
-        <h2 class="cura-process-title">
+        <h2 class="cura-team-member-title">
             <a class="<?=$i > 0 ? 'collapsed' : ''?>" href="javascript:;" data-target="#team-member-<?=$post->ID?>" data-toggle="collapse">
                 <?php the_title(); ?>
                 <span class="icon icon-caret-up"></span>

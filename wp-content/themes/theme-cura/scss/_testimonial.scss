@@ -1,0 +1,109 @@
+@media screen {
+    .cura-testimonial {
+        overflow: hidden;
+        padding-bottom: 220px;
+        border-bottom: 1px solid $dark-gray;
+        margin: 95px 0;
+        position: relative;
+        text-align: center;
+
+        .testimonial-image {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            img {
+                max-width: 300px;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+
+        h3 {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin: 0 0 30px;
+        }
+
+        p {
+            font-family: Nexa Bold, sans-serif;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin: 0 0 30px;
+        }
+    }
+
+    .testimonial-video-button {
+        border: 7px solid $yellow;
+        font-family: Nexa Bold, sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 35px;
+        text-transform: uppercase;
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        a {
+            color: $yellow;
+        }
+        .thumbnail-container {
+            width: 155px;
+            height: 100px;
+            position: relative;
+            .play {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -31px 0 0 -31px;
+            }
+        }
+        .testimonial-video-label {
+            display: block;
+            padding: 15px 0;
+            text-align: center;
+            width: 155px;
+        }
+    }
+}
+
+@media screen and (min-width: $screen-xs) {
+    .cura-testimonial {
+        padding-bottom: 440px;
+        .testimonial-image img {
+            max-width: 600px;
+        }
+    }
+
+    .testimonial-video-button {
+        .testimonial-video-label,
+        .thumbnail-container {
+            float: left;
+        }
+    }
+}
+
+@media screen and (min-width: $screen-md) {
+    .cura-testimonial-container {
+        &:nth-child(odd) .cura-testimonial {
+            padding: 0 0 0 620px;
+            .testimonial-image {
+                left: 0;
+                right: auto;
+            }
+        }
+
+        &:nth-child(even) .cura-testimonial {
+            padding: 0 620px 0 0;
+            .testimonial-image {
+                right: 0;
+                left: auto;
+            }
+        }
+
+        .cura-testimonial {
+            min-height: 400px;
+            text-align: left;
+        }
+    }
+}
