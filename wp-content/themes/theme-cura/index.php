@@ -20,6 +20,7 @@ get_header();
         <?php get_template_part('loop'); ?>
     </div>
     <aside id="sidebar" class="col-xs-12 col-sm-12 col-md-3 col-lg-2">
+        <?php get_search_form(); ?>
     </aside>
 </div>
 <?php

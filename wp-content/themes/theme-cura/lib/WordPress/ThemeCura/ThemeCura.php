@@ -40,6 +40,15 @@ class ThemeCura
         \add_action('customize_register', array($this->customizer, 'register'));
         
         \add_filter('the_content', array($this, 'cleanShortcodes'));
+
+        \add_filter('pre_get_posts', array($this, 'searchFilter'));
+    }
+
+    public function searchFilter($query) {
+        if ($query->is_search) {
+            $query->set('post_type', 'post');
+        }
+        return $query;
     }
 
     /**

@@ -9300,6 +9300,30 @@ button.close {
 	}
 }
 
+@media screen {
+	.searchform {
+		position: relative;
+	}
+
+	.searchform input {
+		border: 3px solid #2F3B48;
+		padding: 12px 20px;
+		display: block;
+		width: 100%;
+	}
+
+	.searchform button {
+		background: none;
+		border: none;
+		position: absolute;
+		top: 50%;
+		height: 22px;
+		padding: 0;
+		margin-top: -11px;
+		right: 10px;
+	}
+}
+
 @media print {
 	nav,
 	.comments,
