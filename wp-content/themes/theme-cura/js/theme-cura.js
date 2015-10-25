@@ -24,6 +24,5 @@
                 scrollTop: 0
             });
         });
-
     });
 })(jQuery);

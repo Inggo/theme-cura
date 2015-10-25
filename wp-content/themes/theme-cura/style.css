@@ -8467,7 +8467,7 @@ p {
 
 .icon-location {
 	background: url("./images/sprites.png");
-	background-position: -30px -73px;
+	background-position: -0px -73px;
 	width: 30px;
 	height: 38px;
 	display: inline-block;
@@ -8475,7 +8475,7 @@ p {
 
 .icon-phone {
 	background: url("./images/sprites.png");
-	background-position: -0px -73px;
+	background-position: -30px -73px;
 	width: 30px;
 	height: 38px;
 	display: inline-block;
@@ -8491,7 +8491,7 @@ p {
 
 .icon-social_facebook {
 	background: url("./images/sprites.png");
-	background-position: -117px -25px;
+	background-position: -156px -0px;
 	width: 20px;
 	height: 38px;
 	display: inline-block;
@@ -8529,6 +8529,54 @@ p {
 	display: inline-block;
 }
 
+.icon-twitter-yellow {
+	background: url("./images/sprites.png");
+	background-position: -117px -82px;
+	width: 33px;
+	height: 26px;
+	display: inline-block;
+}
+
+.icon-linkedin-yellow {
+	background: url("./images/sprites.png");
+	background-position: -30px -111px;
+	width: 27px;
+	height: 27px;
+	display: inline-block;
+}
+
+.icon-facebook-yellow {
+	background: url("./images/sprites.png");
+	background-position: -156px -38px;
+	width: 16px;
+	height: 27px;
+	display: inline-block;
+}
+
+.icon-google-yellow {
+	background: url("./images/sprites.png");
+	background-position: -0px -111px;
+	width: 30px;
+	height: 27px;
+	display: inline-block;
+}
+
+.icon-email-yellow {
+	background: url("./images/sprites.png");
+	background-position: -117px -25px;
+	width: 35px;
+	height: 27px;
+	display: inline-block;
+}
+
+.icon-print-yellow {
+	background: url("./images/sprites.png");
+	background-position: -117px -52px;
+	width: 31px;
+	height: 30px;
+	display: inline-block;
+}
+
 .icon-bed {
 	background: url("./images/sprites.png");
 	background-position: -117px -0px;
@@ -8555,7 +8603,7 @@ p {
 
 .icon-caret-up {
 	background: url("./images/sprites.png");
-	background-position: -117px -63px;
+	background-position: -57px -111px;
 	width: 33px;
 	height: 12px;
 	display: inline-block;
@@ -8563,7 +8611,7 @@ p {
 
 .icon-caret-down {
 	background: url("./images/sprites.png");
-	background-position: -117px -75px;
+	background-position: -90px -111px;
 	width: 33px;
 	height: 12px;
 	display: inline-block;
@@ -9083,6 +9131,78 @@ p {
 	margin: -5px auto 15px;
 }
 
+.blog-post .share {
+	border-top: 1px solid #FDD304;
+	clear: both;
+	overflow: hidden;
+	padding: 12px 15px 12px 160px;
+}
+
+.blog-post .share .share-label {
+	display: block;
+	float: left;
+	margin: 0 0 0 -160px;
+	line-height: 32px;
+}
+
+.blog-post .share .icon {
+	margin: 0 15px;
+}
+
+.blog-post .comments {
+	margin-top: 25px;
+	clear: both;
+	overflow: hidden;
+}
+
+.blog-post .comments input,
+.blog-post .comments textarea {
+	border: 2px solid #FDD304;
+	width: 100%;
+	padding: 15px 20px;
+	font-size: 14px;
+	height: 60px;
+}
+
+.blog-post .comments input:active,
+.blog-post .comments input:focus,
+.blog-post .comments textarea:active,
+.blog-post .comments textarea:focus {
+	outline: none;
+	box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.4);
+}
+
+.blog-post .comments input[type="submit"] {
+	color: #FDD304;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: #FFF;
+	letter-spacing: 1px;
+}
+
+.blog-post .comments .comment-reply-title {
+	font-family: Nexa Light, sans-serif;
+	font-size: 16px;
+	text-align: left;
+	margin: 0 0 10px;
+	font-weight: normal;
+	letter-spacing: 0;
+	text-transform: none;
+	position: relative;
+}
+
+.blog-post .comments .comment-reply-title:after {
+	display: inline-block;
+	content: "";
+	width: 0;
+	height: 0;
+	border-width: 5px 5.5px 0 5.5px;
+	border-style: solid;
+	border-color: #FDD304 transparent transparent transparent;
+	position: relative;
+	top: -2px;
+}
+
 .nav-next {
 	position: relative;
 }
@@ -9129,5 +9249,24 @@ p {
 	.blog-post:nth-child(odd) .post-thumbnail {
 		float: left;
 		margin: 0 10px 10px 0;
+	}
+
+	.comment-form {
+		display: block;
+		margin: 0 -15px;
+	}
+
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url {
+		width: 33.33333333%;
+		float: left;
+		padding: 0 15px;
+	}
+
+	.logged-in-as,
+	.comment-form-comment,
+	.form-submit {
+		padding: 0 15px;
 	}
 }

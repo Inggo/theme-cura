@@ -145,6 +145,7 @@ class ThemeCura
     public function registerScripts()
     {
         \wp_register_script('modernizr', \get_template_directory_uri() . '/js/modernizr.min.js', array(), '3.1.0');
+        \wp_register_script('placeholders', \get_template_directory_uri() . '/js/placeholders.min.js', array(), '3.1.0');
         \wp_register_script('jquery', \get_template_directory_uri() . '/js/jquery.min.js', array(), '1.11.3', true);
         \wp_register_script('bootstrap', \get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.5', true);
         \wp_register_script('theme-cura', \get_template_directory_uri() . '/js/theme-cura.js', array('modernizr', 'bootstrap'), $this->theme_data->Version, true);
@@ -164,6 +165,7 @@ class ThemeCura
     public function enqueueScripts()
     {
         \wp_enqueue_script('modernizr');
+        \wp_enqueue_script('placeholders');
         \wp_enqueue_script('bootstrap');
         \wp_enqueue_script('theme-cura');
     }

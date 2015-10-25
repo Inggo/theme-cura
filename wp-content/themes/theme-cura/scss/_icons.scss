@@ -10,6 +10,13 @@
 @include icon('social_linkedin',  'white-linkedin',  36, 36);
 @include icon('social_twitter',   'white-twitter',   42, 34);
 
+@include icon('twitter-yellow',  'yellow-twitter',  33, 26);
+@include icon('linkedin-yellow', 'yellow-linkedin', 27, 27);
+@include icon('facebook-yellow', 'yellow-facebook', 16, 27);
+@include icon('google-yellow',   'yellow-google',   30, 27);
+@include icon('email-yellow',    'yellow-mail',     35, 27);
+@include icon('print-yellow',    'yellow-print',    31, 30);
+
 // Property icons
 @include icon('bed',     'white-bed',     39, 25);
 @include icon('bath',    'white-bath',    40, 39);

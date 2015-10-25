@@ -36,6 +36,74 @@
             margin: -5px auto 15px;
         }
     }
+
+    .share {
+        border-top: 1px solid $yellow;
+        clear: both;
+        overflow: hidden;
+        padding: 12px 15px 12px 160px;
+
+        .share-label {
+            display: block;
+            float: left;
+            margin: 0 0 0 -160px;
+            line-height: 32px;
+        }
+
+        .icon {
+            margin: 0 15px;
+        }
+    }
+
+    .comments {
+        margin-top: 25px;
+        clear: both;
+        overflow: hidden;
+
+        input, textarea {
+            border: 2px solid $yellow;
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 14px;
+            height: 60px;
+            &:active,
+            &:focus {
+                outline: none;
+                box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.4);
+            }
+        }
+
+        input[type="submit"] {
+            color: $yellow;
+            text-transform: uppercase;
+            font-weight: bold;
+            background: $white;
+            letter-spacing: 1px;
+        }
+
+        // Comment form
+        .comment-reply-title {
+            font-family: Nexa Light, sans-serif;
+            font-size: 16px;
+            text-align: left;
+            margin: 0 0 10px;
+            font-weight: normal;
+            letter-spacing: 0;
+            text-transform: none;
+            position: relative;
+            &:after {
+                display: inline-block;
+                content: "";
+                width: 0;
+                height: 0;
+                border-width: 5px 5.5px 0 5.5px;
+                border-style: solid;
+                border-color: $yellow transparent transparent transparent;
+                position: relative;
+                top: -2px;
+            }
+        }
+    }
 }
 
 .nav-next {
@@ -86,5 +154,24 @@
                 margin: 0 10px 10px 0;
             }
         }
+    }
+
+    .comment-form {
+        display: block;
+        margin: 0 -15px;
+    }
+
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-url {
+        width: 33.33333333%;
+        float: left;
+        padding: 0 15px;
+    }
+
+    .logged-in-as,
+    .comment-form-comment,
+    .form-submit {
+        padding: 0 15px;
     }
 }
