@@ -3,9 +3,9 @@
     h1 {
         color: $yellow;
         text-transform: uppercase;
-        font-size: 62px;
         font-weight: bold;
-        letter-spacing: 14px;
+        font-size: 30px;
+        letter-spacing: 7px;
         margin: 0 0 90px;
     }
 
@@ -19,6 +19,7 @@
 
     p {
         line-height: 25px;
+        font-size: 20px;
     }
 
     .container-main {
@@ -35,10 +36,16 @@
         border-bottom: 1px solid $light-yellow;
         margin-top: 20px;
     }
+}
 
-    @media screen and (min-width: $screen-sm) {
-        .page-wrapper {
-            padding-top: 110px;
-        }
+@media screen and (min-width: $screen-sm) {
+    h1 {
+        font-size: 62px;
+        letter-spacing: 14px;
     }
+
+    .page-wrapper {
+        padding-top: 110px;
+    }
+
 }

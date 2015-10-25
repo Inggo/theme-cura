@@ -36,6 +36,8 @@ class ThemeCura
         \add_action('init', array($this, 'registerShortcodes'));
 
         \add_action('admin_notices', array($this, 'checkDependencies'));
+
+        \add_action('widgets_init', array($this, 'registerSidebar'));
         
         \add_action('customize_register', array($this->customizer, 'register'));
         
@@ -52,11 +54,27 @@ class ThemeCura
     }
 
     /**
+     * Register the sidebar
+     */
+    public function registerSidebar()
+    {
+        register_sidebar(array(
+            'name'          => 'Sidebar',
+            'id'            => 'sidebar',
+            'before_widget' => '<div class="widget">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h4 class="widget-title">',
+            'after_title'   => '</h4>',
+        ));
+    }
+
+    /**
      * Clean the surrounding <p> tags on our shortcodes
      * @param  string  $content  Contents of the_content()
      * @return string            Cleaned up contents
      */
-    public function cleanShortcodes($content) {
+    public function cleanShortcodes($content)
+    {
         $array = array(
             // List all possible opening shortcodes
             '<p>[cura_properties' => '[cura_properties',
@@ -85,10 +103,13 @@ class ThemeCura
         ));
 
         // Add thumbnail support
-        \add_theme_support('post-thumbnails', array('post', 'cura_property', 'cura_video', 'cura_process'));
+        \add_theme_support('post-thumbnails');
 
         // Set the thumbnail size
         \set_post_thumbnail_size(396, 190);
+
+        // Add custom image sizes
+        \add_image_size('cura_team_member', 212, 282, array('center', 'center'));
 
         // Add menus support
         \add_theme_support('menus');
@@ -97,6 +118,9 @@ class ThemeCura
         \register_nav_menus(array(
             'main_menu' => 'Main Menu',
         ));
+
+        // Add widgets support
+        \add_theme_support('widgets');
     }
 
     /**

@@ -8427,9 +8427,9 @@ button.close {
 	h1 {
 		color: #FDD304;
 		text-transform: uppercase;
-		font-size: 62px;
 		font-weight: bold;
-		letter-spacing: 14px;
+		font-size: 30px;
+		letter-spacing: 7px;
 		margin: 0 0 90px;
 	}
 
@@ -8443,6 +8443,7 @@ button.close {
 
 	p {
 		line-height: 25px;
+		font-size: 20px;
 	}
 
 	.container-main {
@@ -8462,6 +8463,11 @@ button.close {
 }
 
 @media screen and (min-width: 768px) {
+	h1 {
+		font-size: 62px;
+		letter-spacing: 14px;
+	}
+
 	.page-wrapper {
 		padding-top: 110px;
 	}
@@ -9106,6 +9112,62 @@ button.close {
 }
 
 @media screen {
+	.cura-team-member {
+		position: relative;
+		border-bottom: 1px solid #2F3B48;
+		margin: 0 0 90px;
+	}
+
+	.cura-team-member .cura-process-title {
+		margin: 0 0 24px;
+	}
+
+	.cura-team-member .cura-process-title a {
+		display: block;
+		color: #2F3B48;
+	}
+
+	.cura-team-member .icon-caret-up {
+		position: absolute;
+		display: inline-block;
+		bottom: 18px;
+		right: 0;
+	}
+
+	.cura-team-member .icon-caret-down {
+		display: none;
+	}
+
+	.cura-team-member .collapsed .icon-caret-up {
+		display: none;
+	}
+
+	.cura-team-member .collapsed .icon-caret-down {
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		top: 18px;
+	}
+
+	.cura-team-member .team-member-inner {
+		padding: 26px 0 30px;
+	}
+
+	.cura-team-member .team-member-image {
+		display: block;
+		margin: 0 0 30px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.cura-team-member .team-member-image {
+		float: left;
+		margin: 0 30px 30px 0;
+	}
+}
+
+@media screen {
+	.single-post h2,
 	.blog h2 {
 		font-size: 36px;
 		line-height: 45px;
@@ -9129,7 +9191,7 @@ button.close {
 
 	.blog-post h3 {
 		text-align: center;
-		font-size: 27px;
+		font-size: 25px;
 		text-transform: uppercase;
 		letter-spacing: 3px;
 		font-weight: bold;
@@ -9221,6 +9283,10 @@ button.close {
 		top: -2px;
 	}
 
+	.blog-post p {
+		font-size: 16px;
+	}
+
 	.nav-next {
 		position: relative;
 	}
@@ -9301,15 +9367,20 @@ button.close {
 }
 
 @media screen {
+	.sidebar {
+		margin: 100px 0 0;
+	}
+
 	.searchform {
 		position: relative;
 	}
 
 	.searchform input {
 		border: 3px solid #2F3B48;
-		padding: 12px 20px;
+		padding: 10px 20px;
 		display: block;
 		width: 100%;
+		margin: 0 0 26px;
 	}
 
 	.searchform button {
@@ -9320,7 +9391,45 @@ button.close {
 		height: 22px;
 		padding: 0;
 		margin-top: -11px;
-		right: 10px;
+		right: 20%;
+	}
+
+	.widget {
+		margin: 26px 0;
+		border: 3px solid #FDD304;
+		padding: 20px 35px;
+		font-size: 20px;
+	}
+
+	.widget-title {
+		font-family: Nexa Bold, sans-serif;
+		font-weight: bold;
+		letter-spacing: 2px;
+		color: #FDD304;
+		margin: 0;
+		font-size: 28px;
+		line-height: 40px;
+		margin: 0 0 28px;
+	}
+
+	.widget ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.widget li {
+		margin: 0 0 1em;
+	}
+
+	.widget a {
+		color: #2F3B48;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.sidebar {
+		margin: 0;
 	}
 }
 
@@ -9333,4 +9442,31 @@ button.close {
 	.video-container {
 		display: none !important;
 	}
+}
+
+#mc_embed_signup {
+	margin-top: 28px;
+}
+
+#mce-EMAIL {
+	border: 3px solid #2F3B48;
+	text-align: center;
+	font-size: 14px;
+	padding: 10px 15px;
+	display: block;
+	width: 100%;
+	margin: 0 0 30px;
+}
+
+#mc-embedded-subscribe {
+	border: 3px solid #FDD304;
+	background: #FFF;
+	color: #FDD304;
+	text-transform: uppercase;
+	display: block;
+	padding: 3px 15px;
+	text-align: center;
+	width: 100%;
+	margin: 0 0 30px;
+	font-weight: bold;
 }

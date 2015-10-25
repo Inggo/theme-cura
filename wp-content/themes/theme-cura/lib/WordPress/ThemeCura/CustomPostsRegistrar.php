@@ -12,6 +12,7 @@ class CustomPostsRegistrar implements CustomPostsRegistrarInterface
         $this->registerPropertyCPT();
         $this->registerVideoCPT();
         $this->registerProcessCPT();
+        $this->registerTeamMemberCPT();
     }
 
     /**
@@ -70,7 +71,7 @@ class CustomPostsRegistrar implements CustomPostsRegistrarInterface
             "hierarchical"        => false,
             "rewrite"             => false,
             "query_var"           => true,
-            "menu_position"       => 21,
+            "menu_position"       => 24,
             "menu_icon"           => "dashicons-format-video",
             "supports"            => array("title", "thumbnail"),
         );
@@ -102,12 +103,43 @@ class CustomPostsRegistrar implements CustomPostsRegistrarInterface
             "hierarchical"        => false,
             "rewrite"             => false,
             "query_var"           => true,
-            "menu_position"       => 22,
+            "menu_position"       => 21,
             "menu_icon"           => "dashicons-controls-repeat",
             "supports"            => array("title", "editor", "thumbnail"),
         );
 
         \register_post_type('cura_process', $args);
     }
-    
+
+    /**
+     * Register the cura_team_member CPT
+     */
+    private function registerTeamMemberCPT()
+    {
+        $labels = array(
+            "all_items"     => "All Team Members",
+            "name"          => "Team",
+            "singular_name" => "Team Member",
+        );
+
+        $args = array(
+            "labels"              => $labels,
+            "description"         => "",
+            "public"              => true,
+            "show_ui"             => true,
+            "has_archive"         => false,
+            "show_in_menu"        => true,
+            "exclude_from_search" => false,
+            "capability_type"     => "post",
+            "map_meta_cap"        => true,
+            "hierarchical"        => false,
+            "rewrite"             => false,
+            "query_var"           => true,
+            "menu_position"       => 22,
+            "menu_icon"           => "dashicons-groups",
+            "supports"            => array("title", "editor", "thumbnail", "page-attributes"),
+        );
+
+        \register_post_type('cura_team_member', $args);
+    }
 }
