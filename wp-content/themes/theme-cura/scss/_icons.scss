@@ -14,3 +14,7 @@
 @include icon('bed',     'white-bed',     39, 25);
 @include icon('bath',    'white-bath',    40, 39);
 @include icon('parking', 'white-parking', 39, 34);
+
+// Carets
+@include icon('caret-up',   'caret-up',   33, 12);
+@include icon('caret-down', 'caret-down', 33, 12);

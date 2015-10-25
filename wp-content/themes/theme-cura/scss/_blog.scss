@@ -1,0 +1,90 @@
+.blog h2 {
+    font-size: 36px;
+    line-height: 45px;
+    margin: 0 0 100px;
+}
+
+.blog-post {
+    overflow: hidden;
+    border: 2px solid $yellow;
+    margin: 0 0 100px;
+    padding: 20px;
+
+    .post-thumbnail {
+        margin: 0 0 20px;
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 27px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: bold;
+        margin: 0 0 20px;
+        a {
+            color: $dark-gray;
+        }
+        + hr {
+            border-top: none;
+            border-bottom: none;
+            background: $dark-gray;
+            width: 10px;
+            height: 3px;
+            margin: -5px auto 15px;
+        }
+    }
+}
+
+.nav-next {
+    position: relative;
+    a {
+        display: block;
+        text-transform: uppercase;
+        font-family: Nexa Bold, sans-serif;
+        font-weight: bold;
+        color: $dark-gray;
+        border-bottom: 1px solid $dark-gray;
+        position: relative;
+        z-index: 1;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    a + .icon {
+        display: block;
+    }
+
+    .icon {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -6px;
+    }
+}
+
+@media screen and (min-width: screen-md) {
+    .blog-post {
+        padding: 40px 60px;
+    }
+}
+
+@media screen and (min-width: $screen-lg) {
+    .blog-post {
+        .post-thumbnail {
+            float: right;
+            margin: 0 0 10px 10px;
+        }
+
+        &:nth-child(odd) {
+            .post-thumbnail {
+                float: left;
+                margin: 0 10px 10px 0;
+            }
+        }
+    }
+}
