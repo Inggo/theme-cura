@@ -1,5 +1,6 @@
 <?php
 global $theme;
+global $post;
 ?>
 <!DOCTYPE html>
 <html class="no-js">
@@ -8,5 +9,5 @@ global $theme;
     <title><?=$theme->helper->getTitleTag();?></title>
     <?php wp_head(); ?>
 </head>
-<body <?=body_class();?>>
+<body <?=body_class($post->post_name);?>>
     <div class="page-wrapper">

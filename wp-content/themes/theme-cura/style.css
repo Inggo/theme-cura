@@ -8423,6 +8423,21 @@ button.close {
 	src: url("fonts/nexa_light.eot?#iefix") format("embedded-opentype"), url("fonts/nexa_light.woff") format("woff"), url("fonts/nexa_light.ttf") format("truetype"), url("fonts/nexa_light.svg#Nexa Light") format("svg");
 }
 
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+	position: relative;
+	min-height: 1px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.col-xs-5ths {
+	width: 20%;
+	float: left;
+}
+
 @media screen {
 	h1 {
 		color: #FDD304;
@@ -8460,6 +8475,18 @@ button.close {
 		border-bottom: 1px solid #FEDC5E;
 		margin-top: 20px;
 	}
+
+	.cura-box {
+		border: 2px solid #FDD304;
+		padding: 30px;
+		margin: 100px 0;
+	}
+
+	.cura-box h3 {
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		font-weight: bold;
+	}
 }
 
 @media screen and (min-width: 768px) {
@@ -8470,6 +8497,29 @@ button.close {
 
 	.page-wrapper {
 		padding-top: 110px;
+	}
+
+	.cura-box {
+		padding: 48px 68px;
+	}
+
+	.col-sm-5ths {
+		width: 20%;
+		float: left;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.col-md-5ths {
+		width: 20%;
+		float: left;
+	}
+}
+
+@media screen and (min-width: 1350px) {
+	.col-lg-5ths {
+		width: 20%;
+		float: left;
 	}
 }
 
@@ -9167,6 +9217,22 @@ button.close {
 }
 
 @media screen {
+	.cura-reason {
+		border: 2px solid #FDD304;
+		text-align: center;
+		padding: 30px 30px;
+		height: 210px;
+		width: 250px;
+		margin: 0 auto 30px;
+	}
+
+	.cura-reason img {
+		display: block;
+		margin: 0 auto 30px;
+	}
+}
+
+@media screen {
 	.single-post h2,
 	.blog h2 {
 		font-size: 36px;
@@ -9431,6 +9497,20 @@ button.close {
 	.sidebar {
 		margin: 0;
 	}
+}
+
+.what-can-go-wrong h2,
+.play-your-game h2 {
+	margin-top: 100px;
+	font-size: 36px;
+}
+
+.what-can-go-wrong h2 {
+	margin-bottom: 100px;
+}
+
+.what-can-go-wrong h3 {
+	margin: 100px 0 30px;
 }
 
 @media print {

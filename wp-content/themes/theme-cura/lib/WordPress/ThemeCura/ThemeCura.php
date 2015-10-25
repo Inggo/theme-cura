@@ -80,6 +80,9 @@ class ThemeCura
             '<p>[cura_properties' => '[cura_properties',
             '<p>[cura_processes'  => '[cura_processes',
             '<p>[cura_video'      => '[cura_video',
+            '<p>[cura_team'       => '[cura_team',
+            '<p>[cura_box'        => '[cura_box',
+            '<p>[/cura_box'       => '[/cura_box',
             // Fix for closing </p>
             ']</p>'   => ']',
             ']<br />' => ']',
