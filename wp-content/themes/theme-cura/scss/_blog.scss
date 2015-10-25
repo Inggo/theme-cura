@@ -1,143 +1,156 @@
-.blog h2 {
-    font-size: 36px;
-    line-height: 45px;
-    margin: 0 0 100px;
-}
-
-.blog-post {
-    overflow: hidden;
-    border: 2px solid $yellow;
-    margin: 0 0 100px;
-    padding: 20px;
-
-    .post-thumbnail {
-        margin: 0 0 20px;
-        img {
-            margin: 0 auto;
-        }
+@media screen {    
+    .blog h2 {
+        font-size: 36px;
+        line-height: 45px;
+        margin: 0 0 100px;
     }
 
-    h3 {
-        text-align: center;
-        font-size: 27px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-weight: bold;
-        margin: 0 0 20px;
-        a {
-            color: $dark-gray;
-        }
-        + hr {
-            border-top: none;
-            border-bottom: none;
-            background: $dark-gray;
-            width: 10px;
-            height: 3px;
-            margin: -5px auto 15px;
-        }
-    }
-
-    .share {
-        border-top: 1px solid $yellow;
-        clear: both;
+    .blog-post {
         overflow: hidden;
-        padding: 12px 15px 12px 160px;
+        border: 2px solid $yellow;
+        margin: 0 0 100px;
+        padding: 20px;
 
-        .share-label {
+        .post-thumbnail {
+            margin: 0 0 20px;
+            img {
+                margin: 0 auto;
+            }
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 27px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin: 0 0 20px;
+            a {
+                color: $dark-gray;
+            }
+            + hr {
+                border-top: none;
+                border-bottom: none;
+                background: $dark-gray;
+                width: 10px;
+                height: 3px;
+                margin: -5px auto 15px;
+            }
+        }
+
+        .share {
+            border-top: 1px solid $yellow;
+            clear: both;
+            overflow: hidden;
+            padding: 12px 15px 12px;
+            text-align: center;
+
+            .share-label {
+                display: block;
+                line-height: 32px;
+                margin: 0 auto;
+            }
+
+            .icon {
+                margin: 0 15px;
+            }
+        }
+
+        .comments {
+            margin-top: 25px;
+            clear: both;
+            overflow: hidden;
+
+            input, textarea {
+                border: 2px solid $yellow;
+                width: 100%;
+                padding: 15px 20px;
+                font-size: 14px;
+                height: 60px;
+                &:active,
+                &:focus {
+                    outline: none;
+                    box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.4);
+                }
+            }
+
+            input[type="submit"] {
+                color: $yellow;
+                text-transform: uppercase;
+                font-weight: bold;
+                background: $white;
+                letter-spacing: 1px;
+            }
+
+            // Comment form
+            .comment-reply-title {
+                font-family: Nexa Light, sans-serif;
+                font-size: 16px;
+                text-align: left;
+                margin: 0 0 10px;
+                font-weight: normal;
+                letter-spacing: 0;
+                text-transform: none;
+                position: relative;
+                &:after {
+                    display: inline-block;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-width: 5px 5.5px 0 5.5px;
+                    border-style: solid;
+                    border-color: $yellow transparent transparent transparent;
+                    position: relative;
+                    top: -2px;
+                }
+            }
+        }
+    }
+
+    .nav-next {
+        position: relative;
+
+        a {
             display: block;
-            float: left;
-            margin: 0 0 0 -160px;
-            line-height: 32px;
+            text-transform: uppercase;
+            font-family: Nexa Bold, sans-serif;
+            font-weight: bold;
+            color: $dark-gray;
+            border-bottom: 1px solid $dark-gray;
+            position: relative;
+            z-index: 1;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        a + .icon {
+            display: block;
         }
 
         .icon {
-            margin: 0 15px;
-        }
-    }
-
-    .comments {
-        margin-top: 25px;
-        clear: both;
-        overflow: hidden;
-
-        input, textarea {
-            border: 2px solid $yellow;
-            width: 100%;
-            padding: 15px 20px;
-            font-size: 14px;
-            height: 60px;
-            &:active,
-            &:focus {
-                outline: none;
-                box-shadow: inset 0px 0px 3px 1px rgba(0,0,0,0.4);
-            }
-        }
-
-        input[type="submit"] {
-            color: $yellow;
-            text-transform: uppercase;
-            font-weight: bold;
-            background: $white;
-            letter-spacing: 1px;
-        }
-
-        // Comment form
-        .comment-reply-title {
-            font-family: Nexa Light, sans-serif;
-            font-size: 16px;
-            text-align: left;
-            margin: 0 0 10px;
-            font-weight: normal;
-            letter-spacing: 0;
-            text-transform: none;
-            position: relative;
-            &:after {
-                display: inline-block;
-                content: "";
-                width: 0;
-                height: 0;
-                border-width: 5px 5.5px 0 5.5px;
-                border-style: solid;
-                border-color: $yellow transparent transparent transparent;
-                position: relative;
-                top: -2px;
-            }
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -6px;
         }
     }
 }
 
-.nav-next {
-    position: relative;
-    a {
-        display: block;
-        text-transform: uppercase;
-        font-family: Nexa Bold, sans-serif;
-        font-weight: bold;
-        color: $dark-gray;
-        border-bottom: 1px solid $dark-gray;
-        position: relative;
-        z-index: 1;
-        &:hover {
-            text-decoration: none;
-        }
-    }
-
-    a + .icon {
-        display: block;
-    }
-
-    .icon {
-        display: none;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        margin-top: -6px;
-    }
-}
-
-@media screen and (min-width: screen-md) {
+@media screen and (min-width: $screen-md) {
     .blog-post {
         padding: 40px 60px;
+
+        .share {
+            padding-left: 160px;
+            text-align: left;
+
+            .share-label {
+                float: left;
+                margin: 0 0 0 -160px;
+            }
+        }
     }
 }
 

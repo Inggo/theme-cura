@@ -20,7 +20,7 @@ if (has_post_thumbnail()) {
         <div class="col-xs-12">
             <div class="video-container youtube-video-container">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe src="https://www.youtube.com/embed/<?=$theme->helper->getVideoID(get_field('video_url'));?>" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/<?=$theme->helper->getVideoID(get_field('video_url'));?>"></iframe>
                 </div>
                 <div class="thumbnail-container" style="background-image: url('<?=$thumb_url;?>');"></div>
                 <div class="play">

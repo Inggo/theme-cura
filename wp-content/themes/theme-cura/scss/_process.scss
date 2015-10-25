@@ -1,17 +1,19 @@
-.cura-process {
-    padding: 50px 70px;
-    border: 2px solid $yellow;
-    margin: 96px 0 0 ;
-}
+@media screen {
+    .cura-process {
+        padding: 50px 70px;
+        border: 2px solid $yellow;
+        margin: 96px 0 0 ;
+    }
 
-.cura-process hr {
-    width: 10px;
-    margin: -5px auto 15px;
-    border: none;
-    height: 3px;
-    background: $dark-gray;
-}
+    .cura-process hr {
+        width: 10px;
+        margin: -5px auto 15px;
+        border: none;
+        height: 3px;
+        background: $dark-gray;
+    }
 
-.cura-process p {
-    font-weight: bold;
+    .cura-process p {
+        font-weight: bold;
+    }
 }

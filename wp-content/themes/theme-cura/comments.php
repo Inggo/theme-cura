@@ -18,4 +18,3 @@ comment_form(array(
     'label_submit'         => __('Submit', 'theme-cura'),
     'comment_field'        => '<p class="comment-form-comment"><textarea id="comment" name="comment" rows="2" aria-required="true" placeholder="Enter your comment here..."></textarea></p>'
 ));
-?>

@@ -1,69 +1,71 @@
-.cura-property {
-    background-position: center center;
-    background-size: cover;
-    position: relative;
-    padding: 20px;
-    height: 300px;
-    max-width: 445px;
-    margin: 0 auto 35px;
+@media screen {    
+    .cura-property {
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+        padding: 20px;
+        height: 300px;
+        max-width: 445px;
+        margin: 0 auto 35px;
 
-    .contents {
-        color: $dark-gray;
+        .contents {
+            color: $dark-gray;
 
-        .cura-property-title {
-            position: absolute;
-            z-index: 2;
-            top: 50%;
-            left: 0;
-            right: 0;
-            white-space: nowrap;
-            text-align: center;
-            margin: -13px auto 0;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            font-size: 23px;
-            font-weight: bold;
-            line-height: 26px;
+            .cura-property-title {
+                position: absolute;
+                z-index: 2;
+                top: 50%;
+                left: 0;
+                right: 0;
+                white-space: nowrap;
+                text-align: center;
+                margin: -13px auto 0;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                font-size: 23px;
+                font-weight: bold;
+                line-height: 26px;
+            }
+
+            .cura-property-info {
+                font-family: Nexa Bold, sans-serif;
+                position: absolute;
+                top: 57.5%;
+                z-index: 2;
+                left: 0;
+                right: 0;
+                text-align: center;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .cura-property-agent {
+                position: absolute;
+                font-weight: bold;
+                position: absolute;
+                bottom: 10px;
+                right: 15px;
+                font-style: italic;
+                z-index: 2;
+                text-transform: uppercase;
+                font-size: 16px;
+                letter-spacing: 2px;
+            }
         }
 
-        .cura-property-info {
-            font-family: Nexa Bold, sans-serif;
+        .overlay {
             position: absolute;
-            top: 57.5%;
-            z-index: 2;
+            top: 0;
             left: 0;
             right: 0;
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .cura-property-agent {
-            position: absolute;
-            font-weight: bold;
-            position: absolute;
-            bottom: 10px;
-            right: 15px;
-            font-style: italic;
-            z-index: 2;
-            text-transform: uppercase;
-            font-size: 16px;
-            letter-spacing: 2px;
+            bottom: 0;
+            background: $yellow;
+            opacity: 0.9;
+            z-index: 1;
         }
     }
 
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: $yellow;
-        opacity: 0.9;
-        z-index: 1;
+    .cura-property-info .icon {
+        margin-left: 5px;
     }
-}
-
-.cura-property-info .icon {
-    margin-left: 5px;
 }

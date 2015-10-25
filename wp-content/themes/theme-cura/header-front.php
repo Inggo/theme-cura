@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1 class="front-page-heading"><?=get_field('heading');?></h1>
+                <div class="front-page-heading"><?=get_field('heading');?></div>
             </div>
         </div>
     </div>

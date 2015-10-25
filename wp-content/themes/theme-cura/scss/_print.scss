@@ -1,0 +1,10 @@
+@media print {
+    nav,
+    .comments,
+    .share,
+    .footer-top,
+    .footer-bottom,
+    .video-container {
+        display: none !important;
+    }
+}

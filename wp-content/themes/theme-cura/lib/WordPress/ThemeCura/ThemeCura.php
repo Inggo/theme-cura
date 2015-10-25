@@ -39,9 +39,25 @@ class ThemeCura
         
         \add_action('customize_register', array($this->customizer, 'register'));
         
-        // Delay wpautop after shortcodes have been parsed
-        \remove_filter('the_content', 'wpautop');
-        \add_filter('the_content', 'wpautop', 12);
+        \add_filter('the_content', array($this, 'cleanShortcodes'));
+    }
+
+    /**
+     * Clean the surrounding <p> tags on our shortcodes
+     * @param  string  $content  Contents of the_content()
+     * @return string            Cleaned up contents
+     */
+    public function cleanShortcodes($content) {
+        $array = array(
+            // List all possible opening shortcodes
+            '<p>[cura_properties' => '[cura_properties',
+            '<p>[cura_processes'  => '[cura_processes',
+            '<p>[cura_video'      => '[cura_video',
+            // Fix for closing </p>
+            ']</p>'   => ']',
+            ']<br />' => ']',
+        );
+        return strtr($content, $array);
     }
 
     /**

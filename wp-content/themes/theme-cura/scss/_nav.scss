@@ -1,127 +1,129 @@
-// Navigation styling
-.icon-bar {
-    background: $dark-gray;
-}
-
-.nav > li > a {
-    color: $dark-gray;
-}
-
-.nav > li {
-    &.active a,
-    > a:hover,
-    > a:focus {
-        background: $light-gray;
-        color: $black;
-    }
-}
-
-.nav:hover > li.active > a {
-    background: none;
-    &:hover,
-    &:focus {
-        background: $light-gray;
-    }
-}
-
-.nav .open > a,
-.nav .open > a:hover,
-.nav .open > a:focus {
-    background: $light-gray;
-}
-
-.nav > li {
-    a:hover,
-    a:focus {
-        background: $light-gray;
-        color: $black;
-    }
-}
-
-.header-main {
-    padding: 0 0 0 130px;
-}
-
-.logo-container {
-    width: 120px;
-    margin: 0 0 0 -120px;
-    float: left;
-}
-
-.navbar-header {
-    height: 60px;
-}
-
-.navbar-nav {
-    margin: 0 -15px;
-}
-
-.nav {
-    float: right;
-    min-width: 160px;
-
-    > li {
-        font-family: Nexa Bold, sans-serif;
-        font-size: 14px;
-        letter-spacing: 3px;
-        &.dropdown > a {
-            padding-right: 23px;
-        }
+@media screen {
+    // Navigation styling
+    .icon-bar {
+        background: $dark-gray;
     }
 
-    > li:last-child.dropdown .dropdown-menu {
-        right: 0;
-        left: auto;
-    }
-}
-
-.dropdown-menu {
-    background: $light-gray;
-    box-shadow: none;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-
-    > li > a {
-        font-family: Nexa Light, sans-serif;
-        letter-spacing: 0;
-        border-bottom: 1px solid $white;
+    .nav > li > a {
         color: $dark-gray;
-        line-height: 49px;
+    }
 
-        &:hover {
-            color: $white;
+    .nav > li {
+        &.active a,
+        > a:hover,
+        > a:focus {
+            background: $light-gray;
+            color: $black;
         }
     }
 
-    > li:last-child > a {
-        border-bottom: none;
+    .nav:hover > li.active > a {
+        background: none;
+        &:hover,
+        &:focus {
+            background: $light-gray;
+        }
     }
-}
 
-.dropdown .caret {
-    position: absolute;
-    top: 50%;
-    margin-top: -2px;
-    border-top: 4px solid $yellow;
-    right: 12px;
-}
-
-.navbar-collapse {
-    box-shadow: none;
-}
-
-.nav-container {
-    margin-bottom: 0;
-}
-
-.navbar-nav .open .dropdown-menu {
-    background: $light-gray;
-
-    > li > a {
-        font-size: 12px;
-        padding: 3px 15px;
+    .nav .open > a,
+    .nav .open > a:hover,
+    .nav .open > a:focus {
+        background: $light-gray;
     }
+
+    .nav > li {
+        a:hover,
+        a:focus {
+            background: $light-gray;
+            color: $black;
+        }
+    }
+
+    .header-main {
+        padding: 0 0 0 130px;
+    }
+
+    .logo-container {
+        width: 120px;
+        margin: 0 0 0 -120px;
+        float: left;
+    }
+
+    .navbar-header {
+        height: 60px;
+    }
+
+    .navbar-nav {
+        margin: 0 -15px;
+    }
+
+    .nav {
+        float: right;
+        min-width: 160px;
+
+        > li {
+            font-family: Nexa Bold, sans-serif;
+            font-size: 14px;
+            letter-spacing: 3px;
+            &.dropdown > a {
+                padding-right: 23px;
+            }
+        }
+
+        > li:last-child.dropdown .dropdown-menu {
+            right: 0;
+            left: auto;
+        }
+    }
+
+    .dropdown-menu {
+        background: $light-gray;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+
+        > li > a {
+            font-family: Nexa Light, sans-serif;
+            letter-spacing: 0;
+            border-bottom: 1px solid $white;
+            color: $dark-gray;
+            line-height: 49px;
+
+            &:hover {
+                color: $white;
+            }
+        }
+
+        > li:last-child > a {
+            border-bottom: none;
+        }
+    }
+
+    .dropdown .caret {
+        position: absolute;
+        top: 50%;
+        margin-top: -2px;
+        border-top: 4px solid $yellow;
+        right: 12px;
+    }
+
+    .navbar-collapse {
+        box-shadow: none;
+    }
+
+    .nav-container {
+        margin-bottom: 0;
+    }
+
+    .navbar-nav .open .dropdown-menu {
+        background: $light-gray;
+
+        > li > a {
+            font-size: 12px;
+            padding: 3px 15px;
+        }
+    }    
 }
 
 @media screen and (min-width: $screen-sm) {
