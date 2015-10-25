@@ -62,6 +62,9 @@ class ThemeCura
         // Add thumbnail support
         \add_theme_support('post-thumbnails', array('post', 'cura_property', 'cura_video', 'cura_process'));
 
+        // Set the thumbnail size
+        \set_post_thumbnail_size(396, 190);
+
         // Add menus support
         \add_theme_support('menus');
 

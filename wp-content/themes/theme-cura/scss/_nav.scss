@@ -103,6 +103,8 @@
     position: absolute;
     top: 50%;
     margin-top: -2px;
+    border-top: 4px solid $yellow;
+    right: 12px;
 }
 
 .navbar-collapse {
@@ -120,7 +122,6 @@
         font-size: 12px;
         padding: 3px 15px;
     }
-
 }
 
 @media screen and (min-width: $screen-sm) {

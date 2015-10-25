@@ -15,6 +15,8 @@ get_header();
     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
         <h1><?=get_the_title($posts_page);?></h1>
         <?=get_field('subheading', $posts_page);?>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
         <?php get_template_part('loop'); ?>
     </div>
     <aside id="sidebar" class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
