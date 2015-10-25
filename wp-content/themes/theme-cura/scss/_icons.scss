@@ -1,7 +1,9 @@
 // Contact icons
-@include icon('location', 'white-location', 30, 38);
-@include icon('phone',    'white-phone',    30, 38);
-@include icon('mail',     'white-mail',     38, 29);
+@include icon('location',       'white-location',       30, 38);
+@include icon('phone',          'white-phone',          30, 38);
+@include icon('mail',           'white-mail',           38, 29);
+@include icon('phone-vertical', 'white-phone-vertical', 18, 38);
+@include icon('monitor',        'white-monitor',        38, 38);
 
 // Social media icons
 @include icon('social_facebook',  'white-facebook',  20, 38);
@@ -28,3 +30,4 @@
 
 // Misc. icons
 @include icon('play', 'white-play', 62, 62);
+
