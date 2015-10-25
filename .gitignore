@@ -66,3 +66,4 @@ Thumbs.db
 
 # track these mu-plugins, plugins, and themes
 !wp-content/themes/theme-cura/
+!wp-content/plugins/contact-form-7/

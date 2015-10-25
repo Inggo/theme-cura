@@ -8525,6 +8525,7 @@ button.close {
 
 .icon-location {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -141px -0px;
 	width: 30px;
 	height: 38px;
@@ -8533,6 +8534,7 @@ button.close {
 
 .icon-phone {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -141px -38px;
 	width: 30px;
 	height: 38px;
@@ -8541,6 +8543,7 @@ button.close {
 
 .icon-mail {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -102px -70px;
 	width: 38px;
 	height: 29px;
@@ -8549,6 +8552,7 @@ button.close {
 
 .icon-social_facebook {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -171px -57px;
 	width: 20px;
 	height: 38px;
@@ -8557,6 +8561,7 @@ button.close {
 
 .icon-social_google {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -0px -62px;
 	width: 41px;
 	height: 38px;
@@ -8565,6 +8570,7 @@ button.close {
 
 .icon-social_instagram {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -0px -100px;
 	width: 35px;
 	height: 35px;
@@ -8573,6 +8579,7 @@ button.close {
 
 .icon-social_linkedin {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -102px -34px;
 	width: 36px;
 	height: 36px;
@@ -8581,6 +8588,7 @@ button.close {
 
 .icon-social_twitter {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -41px -62px;
 	width: 42px;
 	height: 34px;
@@ -8589,6 +8597,7 @@ button.close {
 
 .icon-twitter-yellow {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -35px -135px;
 	width: 33px;
 	height: 26px;
@@ -8597,6 +8606,7 @@ button.close {
 
 .icon-linkedin-yellow {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -171px -95px;
 	width: 27px;
 	height: 27px;
@@ -8605,6 +8615,7 @@ button.close {
 
 .icon-facebook-yellow {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -171px -122px;
 	width: 16px;
 	height: 27px;
@@ -8613,6 +8624,7 @@ button.close {
 
 .icon-google-yellow {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -171px -30px;
 	width: 30px;
 	height: 27px;
@@ -8621,6 +8633,7 @@ button.close {
 
 .icon-email-yellow {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -0px -135px;
 	width: 35px;
 	height: 27px;
@@ -8629,6 +8642,7 @@ button.close {
 
 .icon-print-yellow {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -171px -0px;
 	width: 31px;
 	height: 30px;
@@ -8637,6 +8651,7 @@ button.close {
 
 .icon-bed {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -35px -100px;
 	width: 39px;
 	height: 25px;
@@ -8645,6 +8660,7 @@ button.close {
 
 .icon-bath {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -62px -0px;
 	width: 40px;
 	height: 39px;
@@ -8653,6 +8669,7 @@ button.close {
 
 .icon-parking {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -102px -0px;
 	width: 39px;
 	height: 34px;
@@ -8661,6 +8678,7 @@ button.close {
 
 .icon-caret-up {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -62px -39px;
 	width: 33px;
 	height: 12px;
@@ -8669,6 +8687,7 @@ button.close {
 
 .icon-caret-down {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -74px -100px;
 	width: 33px;
 	height: 12px;
@@ -8677,6 +8696,7 @@ button.close {
 
 .icon-play {
 	background: url("./images/sprites.png");
+	background-position: -0px -0px;
 	background-position: -0px -0px;
 	width: 62px;
 	height: 62px;
@@ -9551,6 +9571,91 @@ button.close {
 	.comment-form-comment,
 	.form-submit {
 		padding: 0 15px;
+	}
+}
+
+@media screen {
+	.contact-background {
+		margin: 20px 0 0;
+		background-size: cover;
+		background-position: center center;
+	}
+
+	.contact-item {
+		padding: 0 0 16px 75px;
+		overflow: hidden;
+		line-height: 40px;
+		color: #FFF;
+		font-size: 14px;
+	}
+
+	.contact-icon {
+		float: left;
+		display: block;
+		margin: 0 0 0 -75px;
+		width: 40px;
+		text-align: center;
+	}
+
+	.wpcf7-form {
+		margin-top: 45px;
+		overflow: hidden;
+	}
+
+	.wpcf7-form input,
+	.wpcf7-form textarea {
+		border: 3px solid #FFF;
+		padding: 8px 20px;
+		line-height: 60px;
+		font-weight: bold;
+		font-family: Nexa Bold, sans-serif;
+		text-transform: uppercase;
+		background: transparent;
+		display: block;
+		width: 100%;
+		color: #FFF;
+		letter-spacing: 3px;
+		font-size: 27px;
+		margin: 0 0 40px;
+	}
+
+	.wpcf7-form input[type="submit"],
+	.wpcf7-form textarea[type="submit"] {
+		background: #FFF;
+		width: auto;
+		float: right;
+		color: #FDD304;
+		width: 275px;
+	}
+
+	.wpcf7-form input.wpcf7-not-valid,
+	.wpcf7-form textarea.wpcf7-not-valid {
+		border-color: #F00;
+	}
+
+	.wpcf7-form textarea {
+		height: 335px;
+	}
+
+	.wpcf7-form .wpcf7-not-valid-tip {
+		position: absolute;
+		white-space: nowrap;
+		bottom: 16px;
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-family: Nexa Bold, sans-serif;
+		letter-spacing: 3px;
+	}
+
+	.wpcf7-form .wpcf7-response-output {
+		color: #FFF;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.wpcf7-not-valid-tip {
+		font-size: 20px;
 	}
 }
 
