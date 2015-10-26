@@ -15,9 +15,9 @@ class CuraFaqsShortcode extends GenericShortcode
     public function output($atts)
     {
         $a = \shortcode_atts(array(
-            'limit'   => 5,
+            'limit'   => -1,
             'offset'  => 0,
-            'type'    => '',
+            'topic'   => '',
             'orderby' => 'menu_order date',
             'order'   => 'DESC',
         ), $atts, 'cura_faqs');
@@ -30,13 +30,13 @@ class CuraFaqsShortcode extends GenericShortcode
             'post_type'      => 'cura_faq',
         );
 
-        // Add type if set
-        if ($a['type'] !== '') {
+        // Add topic if set
+        if ($a['topic'] !== '') {
             $args['tax_query'] = array(
                 array(
-                    'taxonomy' => 'cura_type',
+                    'taxonomy' => 'cura_topic',
                     'field'    => 'slug',
-                    'terms'    => $a['type'],
+                    'terms'    => $a['topic'],
                 ),
             );
         }
