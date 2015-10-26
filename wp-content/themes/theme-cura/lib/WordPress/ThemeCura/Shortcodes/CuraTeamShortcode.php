@@ -17,7 +17,7 @@ class CuraTeamShortcode extends GenericShortcode
         $a = \shortcode_atts(array(
             'limit'   => -1,
             'offset'  => 0,
-            'orderby' => 'date',
+            'orderby' => 'menu_order date',
             'order'   => 'DESC',
         ), $atts, 'cura_team');
 

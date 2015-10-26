@@ -1,11 +1,20 @@
 @media screen {
-    .cura-team-member {
+    .faqs-container {
+        margin-top: 90px;
+    }
+
+    .cura-faq {
         position: relative;
         border-bottom: 1px solid $dark-gray;
-        margin: 0 0 90px;
+        margin: 0 0 35px;
+        padding: 0 0 24px;
 
-        .cura-team-member-title {
-            margin: 0 0 24px;
+        .cura-faq-question {
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 3px;
 
             a {
                 display: block;
@@ -33,24 +42,15 @@
                 display: inline-block;
                 position: absolute;
                 right: 0;
-                top: 18px;
+                bottom: 18px;
             }
         }
 
-        .team-member-inner {
-            padding: 26px 0 30px;
+        .faq-inner {
+            padding: 18px 0 0;
+            p {
+                font-size: 16px;
+            }
         }
-
-        .team-member-image {
-            display: block;
-            margin: 0 0 30px;
-        }
-    }
-} 
-
-@media screen and (min-width: $screen-sm) {
-    .cura-team-member .team-member-image {        
-        float: left;
-        margin: 0 30px 30px 0;
     }
 }

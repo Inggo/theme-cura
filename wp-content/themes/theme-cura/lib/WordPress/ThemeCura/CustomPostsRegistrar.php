@@ -11,6 +11,7 @@ class CustomPostsRegistrar implements CustomPostsRegistrarInterface
     {
         // Register Taxonomies
         $this->registerTypeTaxonomy();
+        $this->registerTopicTaxonomy();
 
         // Register CPTs
         $this->registerPropertyCPT();
@@ -19,6 +20,7 @@ class CustomPostsRegistrar implements CustomPostsRegistrarInterface
         $this->registerTeamMemberCPT();
         $this->registerTestimonialCPT();
         $this->registerReasonCPT();
+        $this->registerFaqCPT();
     }
 
     /**
@@ -37,11 +39,34 @@ class CustomPostsRegistrar implements CustomPostsRegistrarInterface
             "label" => "Types",
             "show_ui" => true,
             "query_var" => true,
-            "rewrite" => array( 'slug' => 'cura_type', 'with_front' => true ),
-            "show_admin_column" => false,
+            "rewrite" => array( 'slug' => 'cura_type', 'with_front' => false ),
+            "show_admin_column" => true,
         );
 
         \register_taxonomy("cura_type", '', $args);
+    }
+
+    /**
+     * Register the cura_topic taxonomy
+     */
+    private function registerTopicTaxonomy()
+    {
+        $labels = array(
+            "name" => "Topics",
+            "label" => "Topics",
+        );
+
+        $args = array(
+            "labels" => $labels,
+            "hierarchical" => false,
+            "label" => "Types",
+            "show_ui" => true,
+            "query_var" => true,
+            "rewrite" => array( 'slug' => 'cura_topic', 'with_front' => false ),
+            "show_admin_column" => true,
+        );
+
+        \register_taxonomy("cura_topic", '', $args);
     }
 
     /**
@@ -197,7 +222,7 @@ class CustomPostsRegistrar implements CustomPostsRegistrarInterface
             "rewrite"             => false,
             "query_var"           => true,
             "menu_position"       => 23,
-            "menu_icon"           => "dashicons-thumbs-up",
+            "menu_icon"           => "dashicons-format-quote",
             "supports"            => array("title", "editor", "thumbnail", "page-attributes"),
         );
 
@@ -229,11 +254,44 @@ class CustomPostsRegistrar implements CustomPostsRegistrarInterface
             "rewrite"             => false,
             "query_var"           => true,
             "menu_position"       => 25,
-            "menu_icon"           => "dashicons-editor-help",
+            "menu_icon"           => "dashicons-format-status",
             "supports"            => array("title", "thumbnail", "page-attributes"),
             "taxonomies"          => array("cura_type"),
         );
 
         \register_post_type('cura_reason', $args);
+    }
+
+    /**
+     * Register the cura_reason CPT
+     */
+    private function registerFaqCPT()
+    {
+        $labels = array(
+            "all_items"     => "All FAQs",
+            "name"          => "FAQs",
+            "singular_name" => "FAQ",
+        );
+
+        $args = array(
+            "labels"              => $labels,
+            "description"         => "",
+            "public"              => true,
+            "show_ui"             => true,
+            "has_archive"         => false,
+            "show_in_menu"        => true,
+            "exclude_from_search" => false,
+            "capability_type"     => "post",
+            "map_meta_cap"        => true,
+            "hierarchical"        => false,
+            "rewrite"             => false,
+            "query_var"           => true,
+            "menu_position"       => 26,
+            "menu_icon"           => "dashicons-editor-help",
+            "supports"            => array("title", "page-attributes"),
+            "taxonomies"          => array("cura_topic"),
+        );
+
+        \register_post_type('cura_faq', $args);
     }
 }

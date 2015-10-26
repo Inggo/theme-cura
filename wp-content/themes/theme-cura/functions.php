@@ -24,9 +24,11 @@ require_once('lib/WordPress/ThemeCura/Shortcodes/CuraTeamShortcode.php');
 require_once('lib/WordPress/ThemeCura/Shortcodes/CuraBoxShortcode.php');
 require_once('lib/WordPress/ThemeCura/Shortcodes/CuraReasonsShortcode.php');
 require_once('lib/WordPress/ThemeCura/Shortcodes/CuraTestimonialsShortcode.php');
+require_once('lib/WordPress/ThemeCura/Shortcodes/CuraFaqsShortcode.php');
 
 // Require 3rd-party Classes
 require_once('lib/wp_bootstrap_navwalker.php');
 
 global $theme;
 $theme = new Inggo\WordPress\ThemeCura\ThemeCura(new Inggo\WordPress\ThemeHelper, new Inggo\WordPress\ThemeCura\ThemeCustomizer);
+

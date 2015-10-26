@@ -17,7 +17,7 @@ class CuraPropertiesShortcode extends GenericShortcode
         $a = \shortcode_atts(array(
             'limit'   => 6,
             'offset'  => 0,
-            'orderby' => 'date',
+            'orderby' => 'menu_order date',
             'order'   => 'DESC',
         ), $atts, 'cura_properties');
 

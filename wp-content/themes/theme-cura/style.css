@@ -9096,11 +9096,11 @@ button.close {
 		margin: 0 0 90px;
 	}
 
-	.cura-team-member .cura-process-title {
+	.cura-team-member .cura-team-member-title {
 		margin: 0 0 24px;
 	}
 
-	.cura-team-member .cura-process-title a {
+	.cura-team-member .cura-team-member-title a {
 		display: block;
 		color: #2F3B48;
 	}
@@ -9271,6 +9271,62 @@ button.close {
 	.cura-reason img {
 		display: block;
 		margin: 0 auto 30px;
+	}
+}
+
+@media screen {
+	.faqs-container {
+		margin-top: 90px;
+	}
+
+	.cura-faq {
+		position: relative;
+		border-bottom: 1px solid #2F3B48;
+		margin: 0 0 35px;
+		padding: 0 0 24px;
+	}
+
+	.cura-faq .cura-faq-question {
+		text-transform: uppercase;
+		margin: 0;
+		font-size: 27px;
+		font-weight: bold;
+		letter-spacing: 3px;
+	}
+
+	.cura-faq .cura-faq-question a {
+		display: block;
+		color: #2F3B48;
+	}
+
+	.cura-faq .icon-caret-up {
+		position: absolute;
+		display: inline-block;
+		bottom: 18px;
+		right: 0;
+	}
+
+	.cura-faq .icon-caret-down {
+		display: none;
+	}
+
+	.cura-faq .collapsed .icon-caret-up {
+		display: none;
+	}
+
+	.cura-faq .collapsed .icon-caret-down {
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		bottom: 18px;
+	}
+
+	.cura-faq .faq-inner {
+		padding: 18px 0 0;
+	}
+
+	.cura-faq .faq-inner p {
+		font-size: 16px;
 	}
 }
 
@@ -9626,9 +9682,7 @@ button.close {
 	}
 }
 
-.page.play-your-game h2,
-.page.testimonials h2,
-.page.what-can-go-wrong h2 {
+.page-child h2 {
 	margin-top: 100px;
 	font-size: 36px;
 }

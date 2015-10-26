@@ -1,15 +1,15 @@
 <?php namespace Inggo\WordPress\ThemeCura\Shortcodes;
 
-class CuraReasonsShortcode extends GenericShortcode
+class CuraFaqsShortcode extends GenericShortcode
 {
-    protected $subview = 'reasons';
+    protected $subview = 'faqs';
 
     public function __construct()
     {
-        add_shortcode('cura_reasons', array($this, 'output'));
-        add_action('cura_reasons_shortcode_pre', array($this, 'pre'), 10, 2);
-        add_action('cura_reasons_shortcode_loop', array($this, 'loop'), 10, 2);
-        add_action('cura_reasons_shortcode_post', array($this, 'post'), 10, 2);
+        add_shortcode('cura_faqs', array($this, 'output'));
+        add_action('cura_faqs_shortcode_pre', array($this, 'pre'), 10, 2);
+        add_action('cura_faqs_shortcode_loop', array($this, 'loop'), 10, 2);
+        add_action('cura_faqs_shortcode_post', array($this, 'post'), 10, 2);
     }
 
     public function output($atts)
@@ -20,14 +20,14 @@ class CuraReasonsShortcode extends GenericShortcode
             'type'    => '',
             'orderby' => 'menu_order date',
             'order'   => 'DESC',
-        ), $atts, 'cura_reasons');
+        ), $atts, 'cura_faqs');
 
         $args = array(
             'posts_per_page' => $a['limit'],
             'offset'         => $a['offset'],
             'orderby'        => $a['orderby'],
             'order'          => $a['desc'],
-            'post_type'      => 'cura_reason',
+            'post_type'      => 'cura_faq',
         );
 
         // Add type if set
@@ -41,14 +41,14 @@ class CuraReasonsShortcode extends GenericShortcode
             );
         }
 
-        $reasons = \get_posts($args);
+        $faqs = \get_posts($args);
 
         // Start output buffer
         ob_start();
 
-        do_action('cura_reasons_shortcode_pre', $reasons, $a);
-        do_action('cura_reasons_shortcode_loop', $reasons, $a);
-        do_action('cura_reasons_shortcode_post', $reasons, $a);
+        do_action('cura_faqs_shortcode_pre', $faqs, $a);
+        do_action('cura_faqs_shortcode_loop', $faqs, $a);
+        do_action('cura_faqs_shortcode_post', $faqs, $a);
 
         $output = ob_get_contents();
 
