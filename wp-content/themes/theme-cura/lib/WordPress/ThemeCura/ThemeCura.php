@@ -79,12 +79,12 @@ class ThemeCura
             // List all possible opening shortcodes
             '<p>[cura_properties'   => '[cura_properties',
             '<p>[cura_processes'    => '[cura_processes',
-            '<p>[cura_video'        => '[cura_video',
             '<p>[cura_team'         => '[cura_team',
             '<p>[cura_box'          => '[cura_box',
             '<p>[/cura_box'         => '[/cura_box',
             '<p>[cura_reason'       => '[cura_reason',
             '<p>[cura_testimonials' => '[cura_testimonials',
+            '<p>[cura_faqs'         => '[cura_faqs',
             // Fix for closing </p>
             ']</p>'   => ']',
             ']<br />' => ']',
